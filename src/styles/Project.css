@@ -11,6 +11,12 @@
   padding: 1rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .Project {
+    width: 100%;
+  }
+}
+
 .Project hr {
   border: 0;
   clear:both;
@@ -28,5 +34,4 @@
 .Project-Preview {
   max-width: 100%;
   object-fit: contain;
-  /* height: auto; */
 }

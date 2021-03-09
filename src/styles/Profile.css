@@ -19,7 +19,7 @@
 .Profile-Image {
   width: 30rem;
   height: 25rem;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .Profile-Text {
