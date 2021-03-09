@@ -1,5 +1,5 @@
 import './styles/Profile.css';
-import icon from './img/Profile-Icon.png'
+import icon from './img/profile.png'
 
 
 const Profile = () => {
@@ -8,7 +8,7 @@ const Profile = () => {
       <div className="Profile">
 
         <div className="Profile-Circle">
-          <img className="Profile-Image" src={icon} />
+          <img className="Profile-Image" src={icon} alt="Profile" />
         </div>
         <div className="Profile-Text">
           <h1>Leshawn Rice</h1>
