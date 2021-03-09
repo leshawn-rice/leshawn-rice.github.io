@@ -1,0 +1,41 @@
+.Navbar #phone-menu {
+  display: none;
+}
+
+.Navbar #phone-menu-label {
+  display: none;
+}
+
+.Navbar-Items {
+  display: block;
+}
+
+.Navbar {
+  z-index:1000;
+}
+
+@media only screen and (max-width: 600px) {
+  .Navbar {
+    position: absolute;
+    right: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .Navbar-Items {
+    display: none;
+  }
+  
+  .Navbar #phone-menu-label {
+    display: inline-block;
+    content: url("../img/menu.png");
+  }
+
+  #phone-menu:checked + #phone-menu-label {
+    content: url("../img/menu-closed.png");
+  }
+
+  #phone-menu:checked + #phone-menu-label + .Navbar-Items {
+    display: block;
+  }
+}

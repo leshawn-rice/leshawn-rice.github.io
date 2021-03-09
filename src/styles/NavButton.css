@@ -1,0 +1,17 @@
+.NavButton {
+  position: absolute;
+  top: 0;
+  font-family: "Comic Sans MS" cursive;
+  color: rgb(204, 195, 195);
+  text-decoration: none;
+}
+
+.NavButton:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .NavButton {
+    position: unset;
+  }
+}

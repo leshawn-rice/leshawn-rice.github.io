@@ -1,0 +1,32 @@
+.Project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  color: white;
+  margin: 1rem;
+  background-color: lightslategray;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.Project hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 98%;               
+  background-color:#000000;
+  height: 1px;
+}
+
+.Project-Btn {
+  background-color: rgb(198, 218, 23);
+  border-radius: 1rem;
+}
+
+.Project-Preview {
+  max-width: 100%;
+  object-fit: contain;
+  /* height: auto; */
+}

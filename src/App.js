@@ -1,9 +1,14 @@
-import './App.css';
+import './styles/App.css';
+import Profile from './Profile';
+import Navbar from './Navbar';
+import Projects from './Projects';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      Hello World
+    <div className="container">
+      <Navbar />
+      <Profile />
+      <Projects />
     </div>
   );
 }

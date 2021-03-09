@@ -1,0 +1,19 @@
+html {
+  background: url("../img/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 10px;
+}
+
+@font-face {
+  font-family: TT Norms;
+  src: url("../fonts/TTNorms-Medium.otf");
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
