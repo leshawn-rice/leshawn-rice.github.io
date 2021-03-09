@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.f2e42af8.chunk.css",
-    "main.js": "/static/js/main.3f3bfef6.chunk.js",
-    "main.js.map": "/static/js/main.3f3bfef6.chunk.js.map",
+    "main.js": "/static/js/main.a4557b96.chunk.js",
+    "main.js.map": "/static/js/main.a4557b96.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
     "static/js/2.393d13e8.chunk.js": "/static/js/2.393d13e8.chunk.js",
@@ -13,12 +13,13 @@
     "static/media/App.css": "/static/media/background.ad3453db.jpg",
     "static/media/ffl.23e1991e.gif": "/static/media/ffl.23e1991e.gif",
     "static/media/grabaphone.fa12f8cb.png": "/static/media/grabaphone.fa12f8cb.png",
+    "static/media/jobify.27020c93.gif": "/static/media/jobify.27020c93.gif",
     "static/media/profile.0a1c53a6.png": "/static/media/profile.0a1c53a6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
     "static/js/2.393d13e8.chunk.js",
     "static/css/main.f2e42af8.chunk.css",
-    "static/js/main.3f3bfef6.chunk.js"
+    "static/js/main.a4557b96.chunk.js"
   ]
 }
