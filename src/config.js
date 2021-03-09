@@ -1,5 +1,6 @@
 import ffl_img from './img/ffl.gif';
 import grabaphone_img from './img/grabaphone.png';
+import jobify_img from './img/jobify.gif';
 
 const NAVBTN_POS_MAP = {
   1: {
@@ -30,7 +31,7 @@ const PROJECTS = [
   {
     name: 'Jobify',
     description: `Jobify is a simple web app to look at job openings`,
-    image: './img/jobify.jpg'
+    image: jobify_img
   }
 ]
 
