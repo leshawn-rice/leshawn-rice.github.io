@@ -1,7 +1,7 @@
 .NavButton {
   position: absolute;
   top: 0;
-  font-family: "Comic Sans MS" cursive;
+  font-family: "Comic Sans MS";
   color: rgb(204, 195, 195);
   text-decoration: none;
 }
