@@ -1,7 +1,8 @@
-import './styles/App.css';
 import Profile from './Profile';
 import Navbar from './Navbar';
 import Projects from './Projects';
+import 'fontsource-roboto';
+import './styles/App.css';
 
 const App = () => {
   return (

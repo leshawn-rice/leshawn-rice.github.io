@@ -1,13 +1,16 @@
 import Project from './Project';
-import './styles/Projects.css'
+import Typography from '@material-ui/core/Typography';
 import { PROJECTS } from './config';
+import './styles/Projects.css'
 
 // Change key from index to uuid
 
 const Projects = () => {
   return (
     <div className="Projects" id="projects">
-      <h1 className="Projects-Heading">Projects</h1>
+      <Typography variant="h2" gutterBottom className="Projects-Heading">
+        Projects
+      </Typography>
       {PROJECTS.map((project, idx) => <Project key={idx} project={project} />)}
     </div>
   )

@@ -1,33 +1,74 @@
-import React, { useState } from 'react';
-import NavButton from './NavButton';
+import React, { useState, useEffect } from 'react';
+import { AppBar, Slide, Toolbar, IconButton, Button } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import './styles/Navbar.css';
 
 const Navbar = () => {
+  const [mobileView, setMobileView] = useState(false)
 
-  const [navDisplay, setNavDisplay] = useState('block');
+  useEffect(() => {
+    const setResponsiveness = () => {
+      return window.innerWidth < 900
+        ? setMobileView(true)
+        : setMobileView(false);
+    };
+    setResponsiveness();
+    window.addEventListener("resize", () => setResponsiveness());
+  }, []);
 
-  const toggleNavItems = () => {
-    if (navDisplay === 'none') {
-      setNavDisplay(current => 'block');
-    }
-    else {
-      setNavDisplay(current => 'none');
-    }
-  }
+  const displayMobile = () => {
+    return (
+      <Toolbar>
+        <IconButton
+          {...{
+            edge: "start",
+            color: "inherit",
+            "aria-label": "menu",
+            "aria-haspopup": "true",
+          }}
+        >
+          <MenuIcon className="Navbar-Mobile-Menu" />
+        </IconButton>
+        <div className="Navbar-Logo-Mobile">Leshawn Rice</div>
+      </Toolbar>
+    );
+  };
 
+  const displayDesktop = () => {
+    return (
+      <>
+        <Toolbar>
+          <div className="Navbar-Logo">
+            <Button href="#">
+              Leshawn Rice
+            </Button>
+          </div>
+          <div className="Navbar-Items">
+            <Button href="#about">
+              About
+            </Button>
+            <Button href="#contact">
+              Contact
+            </Button>
+            <Button href="#projects">
+              Projects
+            </Button>
+          </div>
+        </Toolbar>
+      </>
+    );
+  };
+
+  const trigger = useScrollTrigger();
   return (
-    <div className="Navbar">
-      <input type="checkbox" id="phone-menu" onChange={toggleNavItems} />
-      <label htmlFor="phone-menu" id="phone-menu-label">
-      </label>
-      <div className="Navbar-Items">
-        <NavButton text="Home" path="#" position={1} />
-        <NavButton text="Projects" path="#projects" position={2} />
-        <NavButton text="About" path="#about" position={3} />
-        <NavButton text="Contact" path="#contact" position={4} />
-      </div>
-    </div>
-  );
+    <Slide in={!trigger}>
+      <AppBar variant="dense" position="fixed" className="Navbar">
+        {mobileView ? displayMobile() : displayDesktop()}
+      </AppBar>
+    </Slide>
+  )
+
 }
 
 export default Navbar;

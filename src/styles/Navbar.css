@@ -1,41 +1,28 @@
-.Navbar #phone-menu {
-  display: none;
+.Navbar-Logo {
+  margin-right: auto;
 }
 
-.Navbar #phone-menu-label {
-  display: none;
+.Navbar-Logo a {
+  font-size: 2.1rem;
+  color: white;
 }
 
 .Navbar-Items {
-  display: block;
+  margin-left: auto;
 }
 
-.Navbar {
-  z-index:1000;
+.Navbar-Items a {
+  color: white;
+  font-size: 1.75rem;
+  margin: 0 2rem;
 }
 
-@media only screen and (max-width: 600px) {
-  .Navbar {
-    position: absolute;
-    right: 1rem;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .Navbar-Items {
-    display: none;
-  }
-  
-  .Navbar #phone-menu-label {
-    display: inline-block;
-    content: url("../img/menu.png");
-  }
+.Navbar-Mobile-Menu {
+  font-size: 3rem;
+  width: 3rem !important;
+  height: 3rem !important;
+}
 
-  #phone-menu:checked + #phone-menu-label {
-    content: url("../img/menu-closed.png");
-  }
-
-  #phone-menu:checked + #phone-menu-label + .Navbar-Items {
-    display: block;
-  }
+.Navbar-Logo-Mobile {
+  font-size: 2.1rem;
 }

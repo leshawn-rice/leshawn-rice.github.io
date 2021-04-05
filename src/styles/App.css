@@ -5,11 +5,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   font-size: 10px;
-}
-
-@font-face {
-  font-family: TT Norms;
-  src: url("../fonts/TTNorms-Medium.otf");
+  scroll-behavior: smooth;
 }
 
 .container {
