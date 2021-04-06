@@ -8,7 +8,7 @@ import './styles/Projects.css'
 const Projects = () => {
   return (
     <div className="Projects" id="projects">
-      <Typography variant="h2" gutterBottom className="Projects-Heading">
+      <Typography variant="h1" gutterBottom className="Projects-Heading">
         Projects
       </Typography>
       {PROJECTS.map((project, idx) => <Project key={idx} project={project} />)}

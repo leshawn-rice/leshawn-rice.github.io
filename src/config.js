@@ -2,21 +2,6 @@ import ffl_img from './img/ffl.gif';
 import grabaphone_img from './img/grabaphone.png';
 import jobify_img from './img/jobify.gif';
 
-const NAVBTN_POS_MAP = {
-  1: {
-    left: '5rem'
-  },
-  2: {
-    left: '15rem',
-  },
-  3: {
-    right: '15rem'
-  },
-  4: {
-    right: '5rem'
-  }
-};
-
 const PROJECTS = [
   {
     title: 'Fantasy Football Trade Tips',
@@ -39,4 +24,29 @@ const PROJECTS = [
   }
 ]
 
-export { NAVBTN_POS_MAP, PROJECTS }
+const HEADERS_DATA = [
+  {
+    label: 'About',
+    href: '#about',
+  },
+  {
+    label: 'Contact',
+    href: '#contact',
+  },
+  {
+    label: 'Projects',
+    href: '#projects',
+  },
+  {
+    label: 'Github',
+    href: 'https://github.com/leshawn-rice',
+    target: '_blank'
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://linkedin.in/in/leshawn-rice',
+    target: '_blank'
+  }
+];
+
+export { PROJECTS, HEADERS_DATA }
