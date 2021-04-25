@@ -20,6 +20,13 @@ const About = () => {
           </Typography>
           <br />
           My bread and butter is <strong>Express</strong>. When working with a backend in Javascript, the stack I'm most familiar with is PostgreSQL, Express, and Node.js, but like I said picking up a new framework or language isn't a problem for me, so I can quickly adapt to a MEAN stack without much difficulty.
+          <br />
+          <a className="project-link" href="#TicketMaster">Yeti</a> runs off of a backend built with Express.
+          <br />
+          <br />
+          When working in a Python backend, the framework I'm most familiar with is <strong>Flask</strong>. While Flask is easy to work with and provides a lot of flexibiliy, I've been getting more into using <strong>Django</strong> since they added asynchronous support.
+          <br />
+          <a className="project-link" href="#Fantasy Football Trade Tips">Fantasy Football Trade Tips</a> runs off of a backend built with Flask.
         </Typography>
       </div>
     </div>

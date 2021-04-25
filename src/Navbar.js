@@ -30,7 +30,7 @@ const Navbar = () => {
 
     const getDrawerChoices = () => {
       return HEADERS_DATA.map(navItem => (
-        <Button onClick={handleDrawerClose} href={navItem.href} target={navItem.target}>{navItem.label}</Button>
+        <Button key={navItem.label} onClick={handleDrawerClose} href={navItem.href} target={navItem.target}>{navItem.label}</Button>
       ))
     };
 
@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
           <div className="Navbar-Items">
             {HEADERS_DATA.map(navItem => (
-              <Button href={navItem.href} target={navItem.target}>{navItem.label}</Button>
+              <Button key={navItem.label} href={navItem.href} target={navItem.target}>{navItem.label}</Button>
             ))}
           </div>
         </Toolbar>
@@ -85,7 +85,7 @@ const Navbar = () => {
   const trigger = useScrollTrigger();
   return (
     <Slide in={!trigger}>
-      <AppBar variant="dense" position="fixed" className="Navbar">
+      <AppBar position="fixed" className="Navbar">
         {mobileView ? displayMobile() : displayDesktop()}
       </AppBar>
     </Slide>

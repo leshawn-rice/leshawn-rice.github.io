@@ -96,6 +96,8 @@
 @media only screen and (max-width: 600px) {
   .Project {
     flex: 100%;
+    width: fit-content;
+    height: fit-content;
   }
   .Project-Title h1 {
     font-size: 1.8rem;

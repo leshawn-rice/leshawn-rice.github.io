@@ -4,7 +4,7 @@ import './styles/Project.css';
 const Project = ({ project }) => {
   const { title, image, description } = project;
   return (
-    <div className="Project">
+    <div className="Project" id={title}>
       <div className="Project-Title">
         <button className="Project-Title-Button">View Code</button>
         <Typography variant="h5" gutterBottom>

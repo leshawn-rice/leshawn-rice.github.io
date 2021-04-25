@@ -6,7 +6,6 @@ const PROJECTS = [
   {
     title: 'Fantasy Football Trade Tips',
     description: `Fantasy Trade Tips is a full stack web application that allows fantasy football players to view stats, get trade suggestions, and simulate trades to view the impact on their new team. It's written in Python, and uses Flask, SQLAlchemy, & WTForms on the backend. It's currently hosted on Heroku, so it may take a moment to spin up.`,
-    image: grabaphone_img
   },
   {
     title: 'Grabaphone API',
@@ -14,13 +13,12 @@ const PROJECTS = [
     image: grabaphone_img
   },
   {
-    title: 'Jobify',
-    description: `Jobify is a web application that aggregates job postings from LinkedIn, Indeed, and Monster so users can easily find, save, and apply to tons of jobs in one place.`,
-    image: grabaphone_img
-  },
-  {
     title: 'Yeti',
     description: 'Yeti is a full stack web application, and a mobile app that empowers users to engage with their community. It uses Express on the backend, and React/React Native on the frontend for the web and mobile apps, respectively.',
+  },
+  {
+    title: 'TicketMaster',
+    description: 'TicketMaster is a full stack web application that allows users to create and manage workspaces & projects. Admins of a workspace can generate, assign, and set priority on projects and tickets, while regular users in a workspace can view, edit, and complete tickets.'
   }
 ]
 
