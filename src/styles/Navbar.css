@@ -16,6 +16,12 @@
 }
 
 .Navbar-Hamburger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: white;
   margin-right: 5%;
   margin-left: auto;
+  z-index: 9999;
 }
