@@ -1,6 +1,4 @@
-import ffl_img from './img/ffl.gif';
 import grabaphone_img from './img/grabaphone.png';
-import jobify_img from './img/jobify.gif';
 
 const PROJECTS = [
   {
