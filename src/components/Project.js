@@ -1,9 +1,9 @@
 import '../styles/Project.css';
 
 const Project = ({ project }) => {
-  const { title, image, description } = project;
+  // const { title, image, description } = project;
   return (
-    <div className="Project" id={title}>
+    <div className="Project">
     </div>
   )
 }

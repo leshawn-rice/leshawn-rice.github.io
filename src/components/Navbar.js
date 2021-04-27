@@ -7,15 +7,30 @@ const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
 
   const toggleDrawer = () => {
-    setOpen(current => !current);
+    if (isOpen) {
+      document.getElementById('navbar-links').classList.add('Navbar-Links-Closed');
+      setTimeout(() => {
+        setOpen(false);
+      }, 499);
+    }
+    else {
+      setOpen(true);
+    }
   }
 
   return (
-    <div className="Navbar">
+    <div className="Navbar" id="navbar">
       <div className="Navbar-Name">
         Leshawn Rice
       </div>
       <div className='Navbar-Hamburger'>
+        {isOpen ? (
+          <div className="Navbar-Links" id="navbar-links">
+            {HEADERS_DATA.map(link => (
+              <a key={`${link.label}-navlink`} href={link.href} target={link.target} className="Navbar-Link">{link.label}</a>
+            ))}
+          </div>
+        ) : null}
         <Hamburger toggled={isOpen} toggle={toggleDrawer} />
       </div>
     </div>

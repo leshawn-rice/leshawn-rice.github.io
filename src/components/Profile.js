@@ -1,4 +1,4 @@
-import icon from '../img/profile.png'
+// import icon from '../img/profile.png'
 import '../styles/Profile.css';
 
 
