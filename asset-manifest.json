@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.36fada91.chunk.css",
-    "main.js": "/static/js/main.4895a1df.chunk.js",
-    "main.js.map": "/static/js/main.4895a1df.chunk.js.map",
+    "main.css": "/static/css/main.e31943e5.chunk.css",
+    "main.js": "/static/js/main.f88b4e82.chunk.js",
+    "main.js.map": "/static/js/main.f88b4e82.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d0605945.js",
     "runtime-main.js.map": "/static/js/runtime-main.d0605945.js.map",
     "static/js/2.eb852aa1.chunk.js": "/static/js/2.eb852aa1.chunk.js",
     "static/js/2.eb852aa1.chunk.js.map": "/static/js/2.eb852aa1.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.36fada91.chunk.css.map": "/static/css/main.36fada91.chunk.css.map",
+    "static/css/main.e31943e5.chunk.css.map": "/static/css/main.e31943e5.chunk.css.map",
     "static/js/2.eb852aa1.chunk.js.LICENSE.txt": "/static/js/2.eb852aa1.chunk.js.LICENSE.txt",
-    "static/media/grabaphone.fa12f8cb.png": "/static/media/grabaphone.fa12f8cb.png",
-    "static/media/profile.0a1c53a6.png": "/static/media/profile.0a1c53a6.png"
+    "static/media/grabaphone.fa12f8cb.png": "/static/media/grabaphone.fa12f8cb.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d0605945.js",
     "static/js/2.eb852aa1.chunk.js",
-    "static/css/main.36fada91.chunk.css",
-    "static/js/main.4895a1df.chunk.js"
+    "static/css/main.e31943e5.chunk.css",
+    "static/js/main.f88b4e82.chunk.js"
   ]
 }
