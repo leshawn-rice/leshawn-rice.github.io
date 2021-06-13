@@ -8,10 +8,7 @@ const Navbar = () => {
 
   const toggleDrawer = () => {
     if (isOpen) {
-      document.getElementById('navbar-links').classList.add('Navbar-Links-Closed');
-      setTimeout(() => {
-        setOpen(false);
-      }, 499);
+      setOpen(false);
     }
     else {
       setOpen(true);
