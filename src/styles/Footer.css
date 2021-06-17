@@ -1,0 +1,23 @@
+.Footer {
+  clear:both;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: 5rem; 
+  margin-top: 20rem;
+  padding: 1rem;
+  color: rgb(177, 177, 177);
+  background-color: rgb(63,66,85);
+  display: flex;
+  justify-content: space-between;
+}
+
+.Footer-Link {
+  cursor: pointer;
+  color: rgb(127, 127, 133);
+}
+
+.Footer-Link:hover {
+  color: rgb(177, 177, 177);
+}

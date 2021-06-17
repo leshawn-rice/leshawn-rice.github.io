@@ -14,7 +14,6 @@
 .Navbar-Name {
   font-size: 3rem;
   font-weight: 700;
-  color: rgb(63, 66, 85);
 }
 
 .Navbar-Hamburger {
@@ -33,7 +32,12 @@
 }
 
 .Navbar-Link {
+  text-decoration: none;
+  background-color: white;
+  margin: 0 1rem;
+  color: rgb(63,66,85);
   font-size: 2rem;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 600px) {
@@ -45,12 +49,4 @@
     align-items: center;
     justify-content: flex-end;
   }
-}
-
-.Navbar-Link {
-  text-decoration: none;
-  background-color: white;
-  color: rgb(63, 66, 85);
-  margin: 0 1rem;
-  font-weight: 500;
 }
