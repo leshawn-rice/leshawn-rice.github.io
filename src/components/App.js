@@ -19,7 +19,7 @@ const App = () => {
         <About handleLink={handleLink} />
         <Projects handleLink={handleLink} />
       </div>
-      <Footer />
+      <Footer handleLink={handleLink} />
     </>
   );
 }
