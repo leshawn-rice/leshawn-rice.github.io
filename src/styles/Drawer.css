@@ -1,0 +1,67 @@
+.Drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: 500ms ease-out 0s 1 slideInFromRight;
+  z-index: 999999;
+}
+
+.Drawer-Closed {
+  animation: 500ms ease-out 0s 1 slideOutToRight;
+}
+
+.Drawer-Link {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  margin: 1rem 10% !important;
+  font-weight: 500;
+}
+
+.Drawer-Links {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+}
+
+.Drawer-Content {
+  position: inherit;
+  top: 0;
+  right: 35vw;
+  background-color: rgb(63,66,85);
+  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.Drawer-Page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  height: 100vh;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+

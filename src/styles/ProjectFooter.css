@@ -1,0 +1,53 @@
+.Project-Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Project-Btn {
+  background: none;
+  outline: none;
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.Project-Btn.Project-Link {
+  background-color: rgb(63,66,85);
+  color: whitesmoke;
+}
+
+.Project-Btn.Project-Source {
+  border: 2px solid rgb(63,66,85);
+  color: rgb(63,66,85);
+}
+
+.Project-Btn:hover {
+  box-shadow: 0 0 0.8rem rgb(63,66,85);
+}
+
+.Project-Btn.Project-Source:active {
+  background-color: rgb(63,66,85);
+  color: whitesmoke;
+}
+
+.Project-Btn.Project-Link:active {
+  background-color: whitesmoke;
+  color: rgb(63,66,85);
+  border: 2px solid rgb(63,66,85);
+}
+
+@media only screen and (max-width: 850px) {
+  .Project-Footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Project-Btn {
+    margin: 1rem 0;
+  }
+}

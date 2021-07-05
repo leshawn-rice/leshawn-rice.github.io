@@ -1,4 +1,5 @@
 import Project from './Project';
+import Seperator from './Seperator';
 import { PROJECTS } from '../config';
 import '../styles/Projects.css'
 
@@ -6,7 +7,7 @@ import '../styles/Projects.css'
 const Projects = ({ handleLink }) => {
   return (
     <div className="Projects" id="projects">
-      <div className="Projects-Seperator"></div>
+      <Seperator />
       <h1 className="Projects-Header">My Projects</h1>
 
       <div className="Projects-Blurb">
@@ -15,6 +16,21 @@ const Projects = ({ handleLink }) => {
 
       <div className="Projects-Content">
         <Project project={PROJECTS['YTI']} handleLink={handleLink} />
+      </div>
+
+      <br />
+
+      <div className="Projects-Blurb">
+        <p className="Projects-Text">When working in a Python backend, the framework I'm most familiar with is Flask. While Flask is easy to work with and provides a lot of flexibiliy, I've been getting more into using Django since they added asynchronous support. The <span onClick={handleLink} className="Projects-Link" data-url="https://grabaphone.herokuapp.com">Grabaphone API</span>, and <span onClick={handleLink} className="Projects-Link" data-url="https://grabaphone.herokuapp.com">Fantasy Football Trade Tips</span>, both have a backend built with Flask.</p>
+      </div>
+      <div className="Projects-Content">
+        <Project project={PROJECTS['GBP']} handleLink={handleLink} />
+      </div>
+
+      <br />
+
+      <div className="Projects-Content">
+        <Project project={PROJECTS['FFL']} handleLink={handleLink} />
       </div>
     </div>
   )

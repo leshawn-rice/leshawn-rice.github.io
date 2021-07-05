@@ -1,8 +1,8 @@
 import Navbar from './Navbar';
 import Projects from './Projects';
+import About from './About';
 import Footer from './Footer';
 import '../styles/App.css';
-import About from './About';
 
 const App = () => {
 
