@@ -18,7 +18,7 @@
 }
 
 .Projects-Link {
-  color: rgb(114, 116, 134);
+  color: rgb(173, 173, 173);
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@
 }
 
 .Projects-Link:hover {
-  color: rgb(63,66,85);
+  color: rgb(255, 255, 255);
 }
 
 .Projects-Content {

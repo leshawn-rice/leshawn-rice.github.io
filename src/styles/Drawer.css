@@ -14,7 +14,7 @@
 
 .Drawer-Link {
   text-decoration: none;
-  color: white;
+  color: rgb(21,21,21);
   font-size: 2.5rem;
   margin: 1rem 10% !important;
   font-weight: 500;
@@ -30,7 +30,7 @@
   position: inherit;
   top: 0;
   right: 35vw;
-  background-color: rgb(63,66,85);
+  background-color: white;
   z-index: 999999;
   width: 100vw;
   height: 100vh;

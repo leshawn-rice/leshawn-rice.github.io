@@ -17,28 +17,28 @@
 }
 
 .Project-Btn.Project-Link {
-  background-color: rgb(63,66,85);
-  color: whitesmoke;
+  background-color: white;
+  color: rgb(21,21,21);
 }
 
 .Project-Btn.Project-Source {
-  border: 2px solid rgb(63,66,85);
-  color: rgb(63,66,85);
+  border: 2px solid white;
+  color: white
 }
 
 .Project-Btn:hover {
-  box-shadow: 0 0 0.8rem rgb(63,66,85);
+  box-shadow: 0 0 0.8rem rgb(153, 146, 146);
 }
 
 .Project-Btn.Project-Source:active {
-  background-color: rgb(63,66,85);
-  color: whitesmoke;
+  background-color: white;
+  color: rgb(21,21,21);
 }
 
 .Project-Btn.Project-Link:active {
-  background-color: whitesmoke;
-  color: rgb(63,66,85);
-  border: 2px solid rgb(63,66,85);
+  background-color: white;
+  color: rgb(21,21,21);
+  border: 2px solid white
 }
 
 @media only screen and (max-width: 850px) {
