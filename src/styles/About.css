@@ -33,6 +33,10 @@
   width: fit-content;
 }
 
+.About-Header-Span {
+  color: yellow;
+}
+
 .has-border {
   border-right: 5px solid white;
 }
@@ -58,17 +62,23 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  height: 5rem;
-  padding: 2rem;
-  background-color: white;
+  height: fit-content;
+  padding: 1.25rem 2rem;
+  border: 2px solid white;
   color: rgb(21,21,21);
+  background: linear-gradient(to right, yellow 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  font-weight: 600;
+  font-size: 1.75rem;
   cursor: pointer;
-  font-weight: 400;
-  font-size: 2rem;
 }
 
 .About-Contact:hover {
-  box-shadow: 0 0 0.8rem white;
+  border: 2px solid rgb(21,21,21);
+  background-position: left bottom;
+  color: rgb(21,21,21);
 }
 
 .About-Contact:active {
@@ -86,7 +96,7 @@
 }
 
 .About-Link {
-  color: rgb(151, 151, 151);
+  color: yellow;
   cursor: pointer;
   margin: 0;
   padding: 0;

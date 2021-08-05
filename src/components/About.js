@@ -8,37 +8,39 @@ const About = ({ handleLink }) => {
   }
 
   useEffect(() => {
-    const txt = 'Software Developer';
-    let i = 0;
-    // Duration in ms
-    let speed = 200;
-    let newText = document.querySelector('.About-Header').innerText + ' ';
+    const texts = ['Backend Developer.', 'Frontend Developer.', 'DevOps Developer.', 'Software Developer.'];
+    const speed = 200;
+    const pause = 2000; // <--- the longer delay between text direction changes
 
-    function typeWriter() {
-      if (i < txt.length) {
-        let header = document.querySelector('.About-Header')
-        newText += txt.charAt(i);
-        header.innerText = newText;
-        i++;
-        setTimeout(typeWriter, speed);
+    function typeWriter(i = 0, index = 1, direction = 1) {
+      let displayed = texts[i].slice(0, index);
+      document.querySelector('.About-Header-Span').textContent = displayed;
+
+      if (displayed.length >= texts[i].length) { // start removing after pause
+        setTimeout(() => typeWriter(i, index - 1, -1), pause);
+      } else if (displayed.length === 0) { // go to next text after pause
+        setTimeout(() => typeWriter((i + 1) % texts.length), pause);
+      } else { // continue in the current direction
+        setTimeout(() => typeWriter(i, index + direction, direction), speed);
       }
     }
 
-    const intervalToClear = setInterval(() => {
+    const typeInterval = setInterval(() => {
       const el = document.querySelector('.About-Header');
       el.classList.toggle('has-border');
     }, 750);
 
     typeWriter();
 
-    return () => { clearInterval(intervalToClear) };
+    return () => { clearInterval(typeInterval) };
+
 
   }, []);
 
   return (
     <div className="About" id="about">
       <div className="About-BG">
-        <h1 className="About-Header">Leshawn Rice. </h1>
+        <h1 className="About-Header">Leshawn Rice. <span className="About-Header-Span"></span></h1>
 
       </div>
       <div className="About-Content">
