@@ -39,6 +39,10 @@
   font-weight: 500;
 }
 
+.Navbar-Link:hover {
+  color: rgb(221, 221, 221);
+}
+
 @media only screen and (max-width: 600px) {
   .Navbar-Links {
     position: absolute;
