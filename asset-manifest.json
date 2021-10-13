@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "https://leshawnrice.com/static/css/main.ce162569.chunk.css",
-    "main.js": "https://leshawnrice.com/static/js/main.1342642c.chunk.js",
-    "main.js.map": "https://leshawnrice.com/static/js/main.1342642c.chunk.js.map",
-    "runtime-main.js": "https://leshawnrice.com/static/js/runtime-main.17df3130.js",
-    "runtime-main.js.map": "https://leshawnrice.com/static/js/runtime-main.17df3130.js.map",
-    "static/js/2.4a8b2af8.chunk.js": "https://leshawnrice.com/static/js/2.4a8b2af8.chunk.js",
-    "static/js/2.4a8b2af8.chunk.js.map": "https://leshawnrice.com/static/js/2.4a8b2af8.chunk.js.map",
-    "index.html": "https://leshawnrice.com/index.html",
-    "static/css/main.ce162569.chunk.css.map": "https://leshawnrice.com/static/css/main.ce162569.chunk.css.map",
-    "static/js/2.4a8b2af8.chunk.js.LICENSE.txt": "https://leshawnrice.com/static/js/2.4a8b2af8.chunk.js.LICENSE.txt",
-    "static/media/About.css": "https://leshawnrice.com/static/media/abt-bg.69a71d91.jpg",
-    "static/media/ffl.712c17a9.png": "https://leshawnrice.com/static/media/ffl.712c17a9.png",
-    "static/media/grabaphone.fa12f8cb.png": "https://leshawnrice.com/static/media/grabaphone.fa12f8cb.png",
-    "static/media/yeti.5bfde2ec.jpg": "https://leshawnrice.com/static/media/yeti.5bfde2ec.jpg"
+    "main.css": "/static/css/main.d4f4c23e.chunk.css",
+    "main.js": "/static/js/main.1342642c.chunk.js",
+    "main.js.map": "/static/js/main.1342642c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f027f2bf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f027f2bf.js.map",
+    "static/js/2.4a8b2af8.chunk.js": "/static/js/2.4a8b2af8.chunk.js",
+    "static/js/2.4a8b2af8.chunk.js.map": "/static/js/2.4a8b2af8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.d4f4c23e.chunk.css.map": "/static/css/main.d4f4c23e.chunk.css.map",
+    "static/js/2.4a8b2af8.chunk.js.LICENSE.txt": "/static/js/2.4a8b2af8.chunk.js.LICENSE.txt",
+    "static/media/About.css": "/static/media/abt-bg.69a71d91.jpg",
+    "static/media/ffl.712c17a9.png": "/static/media/ffl.712c17a9.png",
+    "static/media/grabaphone.fa12f8cb.png": "/static/media/grabaphone.fa12f8cb.png",
+    "static/media/yeti.5bfde2ec.jpg": "/static/media/yeti.5bfde2ec.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.17df3130.js",
+    "static/js/runtime-main.f027f2bf.js",
     "static/js/2.4a8b2af8.chunk.js",
-    "static/css/main.ce162569.chunk.css",
+    "static/css/main.d4f4c23e.chunk.css",
     "static/js/main.1342642c.chunk.js"
   ]
 }
