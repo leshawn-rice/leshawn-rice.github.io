@@ -1,8 +1,9 @@
 import Navbar from './Navbar';
 import Projects from './Projects';
 import About from './About';
+import Skills from './Skills'
 import Footer from './Footer';
-import '../styles/App.css';
+import '../styles/App.scss';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
       <Navbar />
       <div className="container">
         <About handleLink={handleLink} />
+        <Skills />
         <Projects handleLink={handleLink} />
       </div>
       <Footer handleLink={handleLink} />

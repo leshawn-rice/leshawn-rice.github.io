@@ -1,0 +1,220 @@
+$darkColor: rgb(21,21,21);
+$lightColor: white;
+$altColor: yellow;
+
+/* Mixins */
+
+// Animation mixins
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin fade-in($duration: 2s) {
+  @include keyframes($name: fadein) {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  -webkit-animation: fadein $duration; /* Safari 4+ */
+  -moz-animation:    fadein $duration; /* Fx 5+ */
+  -o-animation:      fadein $duration; /* Opera 12+ */
+  animation:         fadein $duration; /* IE 10+, Fx 29+ */
+}
+
+@mixin fade-out($duration: 2s) {
+  @include keyframes($name: fadeout) {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  -webkit-animation: fadeout $duration; /* Safari 4+ */
+  -moz-animation:    fadeout $duration; /* Fx 5+ */
+  -o-animation:      fadeout $duration; /* Opera 12+ */
+  animation:         fadeout $duration; /* IE 10+, Fx 29+ */
+}
+
+@mixin slide-from-left($duration: 500ms) {
+  @include keyframes($name: slideFromLeft) {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  -webkit-animation: slideFromLeft $duration; /* Safari 4+ */
+  -moz-animation:    slideFromLeft $duration; /* Fx 5+ */
+  -o-animation:      slideFromLeft $duration; /* Opera 12+ */
+  animation:         slideFromLeft $duration; /* IE 10+, Fx 29+ */
+}
+
+@mixin slide-from-right($duration: 500ms) {
+  @include keyframes($name: slideFromRight) {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  -webkit-animation: slideFromRight $duration; /* Safari 4+ */
+  -moz-animation:    slideFromRight $duration; /* Fx 5+ */
+  -o-animation:      slideFromRight $duration; /* Opera 12+ */
+  animation:         slideFromRight $duration; /* IE 10+, Fx 29+ */
+}
+
+// Theme mixins
+
+@mixin theme($themePrimary: $primaryColor, $themeSecondary: $secondaryColor) {
+  background: $themePrimary;
+  color: $themeSecondary;
+}
+
+// Structural mixins
+
+@mixin row($height: 100%, $width: 100%) {
+  display: flex;
+  flex-direction: row;
+  height: $height;
+  width: $width;
+  flex-wrap: wrap;
+}
+
+@mixin column($height: 100%, $width: 100%) {
+  display: flex;
+  flex-direction: column;
+  height: $height;
+  width: $width;
+  flex: 1 1 0;
+}
+
+@mixin base-container($height: 100vh, $width: 100vw) {
+  height: $height;
+  width: $width;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tags */
+
+html {
+  @include base-container;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include base-container($height: inherit, $width: inherit);
+  background-color: $darkColor;
+}
+
+/* Classes */
+
+// Structure & Alignment
+
+.row {
+  @include row($height: fit-content, $width: 100%);
+}
+
+.col {
+  @include column($height: inherit, $width: fit-content);
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.bg-dark {
+  @include theme($themePrimary: $darkColor, $themeSecondary: $lightColor);
+}
+
+.bg-light {
+  @include theme($themePrimary: $lightColor, $themeSecondary: $darkColor);
+}
+
+// Text & Links
+
+// Headers
+
+.header-1 {
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.header-2 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.header-3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.header-4 {
+  font-size: 2.75rem;
+  font-weight: 500;
+}
+
+.header-5 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+// Paragraphs
+
+.text {
+  font-size: 1.5rem;
+}
+
+.text-large {
+  font-size: 2rem;
+}
+
+.text-small {
+  font-size: 1.25rem;
+}
+
+.text-xl {
+  font-size: 2.5rem;
+}
+
+// Captions
+
+@mixin link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: $altColor;
+}

@@ -1,0 +1,46 @@
+@use 'index';
+
+.Drawer {
+  @include index.base-container;
+  @include index.slide-from-right;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Drawer-Closed {
+  @include index.slide-from-left;
+}
+
+.Drawer-Link {
+  @include index.link;
+  color: rgb(21,21,21);
+  font-size: 2.5rem;
+  margin: 1rem 10% !important;
+}
+
+.Drawer-Links {
+  @include index.column;
+  justify-content: center;
+  height: 40%;
+}
+
+.Drawer-Content {
+  position: inherit;
+  top: 0;
+  right: 35vw;
+  background-color: white;
+  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.Drawer-Page {
+  @include index.base-container($width: 60vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+}

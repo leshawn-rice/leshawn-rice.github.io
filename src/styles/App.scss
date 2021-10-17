@@ -1,3 +1,5 @@
+@use 'index';
+
 .container {
   margin-top: 10%;
   margin-left: 15%;
@@ -5,5 +7,5 @@
 }
 
 #root {
-  color: rgb(255, 255, 255);
+  color: index.$lightColor;
 }
