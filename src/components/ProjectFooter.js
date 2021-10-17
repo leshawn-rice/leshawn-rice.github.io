@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ProjectFooter.css';
+import '../styles/ProjectFooter.scss';
 
 const ProjectFooter = ({ url, github, handleLink }) => {
   return (

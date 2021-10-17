@@ -1,14 +1,15 @@
+@use 'index';
+
 .Navbar {
+  @include index.row($height: 5rem, $width: 100%);
+  @include index.theme($themePrimary: index.$darkColor, $themeSecondary: index.$lightColor);
   position:fixed;
-  display: flex;
   justify-content: flex-start;
-  width: 100%;
+  align-items: center;
   margin: 2.5%;
   top: 0;
   left: 0;
-  height: 5rem;
   margin-top: 0;
-  background-color: rgb(21,21,21);;
 }
 
 .Navbar-Name {
@@ -17,9 +18,8 @@
 }
 
 .Navbar-Hamburger {
-  position: relative;
   display: flex;
-  flex-direction: row;
+  position: relative;
   align-items: center;
   font-size: 1.5rem;
   margin-right: 5%;
@@ -27,20 +27,19 @@
 }
 
 .Navbar-Links {
-  display: flex;
-  flex-direction: row;
+  @include index.row;
 }
 
 .Navbar-Link {
+  @include index.link($color: index.$lightColor, $fontSize: 2rem);
+  @include index.fade-in;
   text-decoration: none;
   margin: 0 1rem;
-  color: white;
-  font-size: 2rem;
-  font-weight: 500;
+  transition-duration: 1s;
 }
 
 .Navbar-Link:hover {
-  color: rgb(221, 221, 221);
+  color: index.$altColor;
 }
 
 @media only screen and (max-width: 600px) {

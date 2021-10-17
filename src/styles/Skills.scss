@@ -14,22 +14,7 @@
 }
 
 .Skill-Pill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5rem;
-  background-color: white;
-  color: index.$darkColor;
-  width: 20rem;
-  height: 4rem;
-  font-size: 2rem;
-  font-weight: 500;
+  @include index.pill($width: 20rem, $height: 4rem);
   box-shadow: 0 0 3px index.$altColor;
   margin: 1rem 2rem;
-}
-
-.Skill-Pill:hover {
-  width: 22rem;
-  height: 5rem;
-  cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import ProjectImage from './ProjectImage';
 import ProjectFooter from './ProjectFooter';
-import '../styles/Project.css';
+import '../styles/Project.scss';
 
 const Project = ({ project, handleLink }) => {
   const { title, image, description, url, github } = project;

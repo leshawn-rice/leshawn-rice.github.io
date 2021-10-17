@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Squash as Hamburger } from 'hamburger-react'
 import { HEADERS_DATA } from '../config';
-import '../styles/Navbar.css';
+import '../styles/Navbar.scss';
 import Drawer from './Drawer';
 
 const Navbar = () => {

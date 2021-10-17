@@ -13,34 +13,37 @@
 }
 
 .Drawer-Link {
-  @include index.link;
-  color: rgb(21,21,21);
-  font-size: 2.5rem;
-  margin: 1rem 10% !important;
+  @include index.link($color: index.$darkColor, $fontSize: 2.5rem);
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  text-align: center;
+  padding-left: 1rem;
 }
 
 .Drawer-Links {
   @include index.column;
   justify-content: center;
-  height: 40%;
 }
 
 .Drawer-Content {
-  position: inherit;
+  @include index.base-container;
+  @include index.column;
+  @include index.theme($themePrimary: index.$lightColor, $themeSecondary: index.$lightColor);
   top: 0;
-  right: 35vw;
-  background-color: white;
-  z-index: 999999;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
+  right: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: inherit;
+  z-index: 1;
 }
 
 .Drawer-Page {
-  @include index.base-container($width: 60vw);
+  @include index.base-container($width: 100%);
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 0;
 }

@@ -1,0 +1,31 @@
+@use 'index';
+
+.Project-Footer {
+  @include index.row($width: 100%);
+  justify-content: space-between;
+}
+
+.Project-Btn.Project-Link {
+  @include index.button(
+    $width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: index.$lightColor, $hoverColor: index.$altColor, $textColor: index.$darkColor
+  );
+  border: 2px solid white;
+}
+
+.Project-Btn.Project-Source {
+  @include index.button(
+    $width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: index.$darkColor, $hoverColor: index.$altColor, $textColor: index.$lightColor
+  );
+  border: 2px solid white;
+}
+
+@media only screen and (max-width: 850px) {
+  .Project-Footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Project-Btn {
+    margin: 1rem 0;
+  }
+}

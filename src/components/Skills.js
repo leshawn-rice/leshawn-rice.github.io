@@ -30,7 +30,7 @@ const Skills = () => {
           React
         </div>
         <div className="Skill-Pill">
-          React-Native
+          React Native
         </div>
         <div className="Skill-Pill">
           Ansible
