@@ -1,15 +1,19 @@
-@use 'index';
+@use "index";
 
 .Navbar {
   @include index.row($height: 5rem, $width: 100%);
-  @include index.theme($themePrimary: index.$darkColor, $themeSecondary: index.$lightColor);
-  position:fixed;
+  @include index.theme(
+    $themePrimary: index.$darkColor,
+    $themeSecondary: index.$lightColor
+  );
+  position: fixed;
   justify-content: flex-start;
   align-items: center;
   margin: 2.5%;
   top: 0;
   left: 0;
   margin-top: 0;
+  z-index: 100;
 }
 
 .Navbar-Name {
