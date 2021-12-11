@@ -12,6 +12,7 @@ const Projects = ({ handleLink }) => {
 
       <div className="Projects-Blurb">
         <p className="Projects-Text">My bread and butter is Express. When working in a backend in Javascript, the stack I'm most familiar with is PostgreSQL, Express, and Node.js, but like I said picking up a new language or framework isn't a problem for me. I can quickly adapt to a different stack as necessary. My most recent project, <span onClick={handleLink} className="Projects-Link" data-url="https://goyeti.surge.sh">Yeti,</span> was built with a PERN stack.</p>
+        <p className="Projects-Text">I am currently migrating my portfolio projects. The code will remain available on Github, but the live sites are not currently available</p>
       </div>
 
       <div className="Projects-Content">

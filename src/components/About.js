@@ -45,7 +45,7 @@ const About = ({ handleLink }) => {
       </div>
       <div className="About-Content">
 
-        <p className="About-Body">My name is Leshawn Rice, and I'm a Software Developer from the Greater Seattle Area. I primarily use Javascript and Python but picking up a new language or framework isn't a problem for me. I'm comfortable developing on the frontend and the backend, and I enjoy challenging myself to make seamless, efficient, and scalable applications.</p>
+        <p className="About-Body">My name is Leshawn Rice, and I'm a Software Developer in Vancouver, WA. I primarily use Javascript and Python but picking up a new language or framework isn't a problem for me. I'm comfortable developing on the frontend and the backend, and I enjoy challenging myself to make seamless, efficient, and scalable applications.</p>
         <div className="About-Footer">
           <button className="About-Contact" onClick={handleContact}>Get in touch</button>
           <p className="About-Social"><span onClick={handleLink} className="About-Link" data-url="https://github.com/leshawn-rice">GitHub</span> <span className="About-Seperator"> |</span> <span onClick={handleLink} className="About-Link" data-url="https://linkedin.com/in/leshawn-rice">LinkedIn</span></p>

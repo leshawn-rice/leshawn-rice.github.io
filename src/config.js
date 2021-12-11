@@ -19,7 +19,7 @@ const PROJECTS = {
   },
   'YTI': {
     title: 'Yeti',
-    description: 'Yeti is a full stack web application, and a mobile app that empowers users to engage with their community. It uses Express on the backend, and React/React Native on the frontend for the web and mobile apps, respectively.',
+    description: 'Yeti is a full stack web application, and a mobile app that empowers users to engage with their community. It uses Express on the backend, and React on the frontend for the web and mobile apps, respectively.',
     image: yeti_img,
     url: 'https://goyeti.surge.sh',
     github: 'https://github.com/leshawn-rice/yeti'
