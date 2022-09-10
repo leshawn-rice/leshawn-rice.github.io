@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../styles/About.css'
+import '../styles/About.scss'
 
 const About = ({ handleLink }) => {
 
@@ -8,7 +8,7 @@ const About = ({ handleLink }) => {
   }
 
   useEffect(() => {
-    const texts = ['Backend Developer.', 'Frontend Developer.', 'DevOps Developer.', 'Software Developer.'];
+    const texts = ['Backend Developer.', 'Frontend Developer.', 'DevOps Engineer.', 'Software Developer.'];
     const speed = 200;
     const pause = 2000; // <--- the longer delay between text direction changes
 

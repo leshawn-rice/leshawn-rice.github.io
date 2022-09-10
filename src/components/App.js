@@ -16,8 +16,8 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <About handleLink={handleLink} />
       <div className="container">
-        <About handleLink={handleLink} />
         <Skills />
         <Projects handleLink={handleLink} />
       </div>

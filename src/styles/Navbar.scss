@@ -3,13 +3,12 @@
 .Navbar {
   @include index.row($height: 5rem, $width: 100%);
   @include index.theme(
-    $themePrimary: index.$darkColor,
-    $themeSecondary: index.$lightColor
+    $themePrimary: index.$headingColor,
+    $themeSecondary: index.$backgroundColor
   );
   position: fixed;
   justify-content: flex-start;
   align-items: center;
-  margin: 2.5%;
   top: 0;
   left: 0;
   margin-top: 0;
@@ -35,7 +34,7 @@
 }
 
 .Navbar-Link {
-  @include index.link($color: index.$lightColor, $fontSize: 2rem);
+  @include index.link($color: index.$backgroundColor, $fontSize: 2rem);
   @include index.fade-in;
   text-decoration: none;
   margin: 0 1rem;

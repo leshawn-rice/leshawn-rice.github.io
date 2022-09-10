@@ -1,6 +1,7 @@
-$darkColor: rgb(21,21,21);
+$backgroundColor: #e4e3e3;
+$headingColor: #2c2b2b;
 $lightColor: white;
-$altColor: yellow;
+$altColor: rgb(88, 144, 218);;
 
 /* Mixins */
 
@@ -138,7 +139,7 @@ $altColor: yellow;
   cursor: pointer;
 }
 
-@mixin button($width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: $lightColor, $hoverColor: $altColor, $textColor: $darkColor) {
+@mixin button($width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: $headingColor, $hoverColor: $altColor, $textColor: $backgroundColor) {
   @include rounded($width: $width, $height: $height, $borderRadius: $borderRadius);
   background-color: $primaryColor;
   color: $textColor;
@@ -147,18 +148,18 @@ $altColor: yellow;
   background-position: right bottom;
   transition: all .5s ease-out;
   &:hover {
-    border: 2px solid $darkColor;
+    border: 2px solid $backgroundColor;
     background-position: left bottom;
-    color: $darkColor;
+    color: $backgroundColor;
   }
   &:active {
-    border: 2px solid $darkColor;
+    border: 2px solid $backgroundColor;
     background-position: left bottom;
-    color: $darkColor;
+    color: $backgroundColor;
   }
 }
 
-@mixin pill($width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: $lightColor, $textColor: $darkColor) {
+@mixin pill($width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: $headingColor, $textColor: $backgroundColor) {
   @include rounded($width: $width, $height: $height, $borderRadius: $borderRadius);
   background-color: $primaryColor;
   color: $textColor;
@@ -183,5 +184,5 @@ html {
 
 body {
   @include base-container($height: inherit, $width: inherit);
-  background-color: $darkColor;
+  background-color: $backgroundColor;
 }

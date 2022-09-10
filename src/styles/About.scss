@@ -1,21 +1,20 @@
+@use 'index';
+
+
 .About {
-  display: flex;
-  flex-direction: column;
+  @include index.column($height: inherit, $width: inherit);
   justify-content: flex-start;
-  width: inherit;
 }
 
 .About-BG {
-  background-image: url('../img/bg-3.jpg');
+  @include index.row($height: 100vh, $width: inherit);
+  background-image: url('../img/about-background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
-  width: inherit;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-start;
+  backdrop-filter: blur(2rem);
   align-items: center;
-  backdrop-filter: blur(20px);
+  padding: 0 1rem;
 }
 
 .About-BG::before {
@@ -29,31 +28,21 @@
   -moz-filter   : blur(0.5rem);
   -webkit-filter: blur(0.5rem);
   -o-filter     : blur(0.5rem);
-  transition        : all 2s linear;
-  -moz-transition   : all 2s linear;
-  -webkit-transition: all 2s linear;
-  -o-transition     : all 2s linear;
 }
 
 .About-Content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 5rem;
-  height: fit-content;
-  width: fit-content;
+  @include index.column($height: fit-content, $width: fit-content);
+  text-align: center;
 }
 
 .About-Header {
   margin-top: 10rem;
   font-size: 5rem;
-  /* color: white; */
+  color: index.$backgroundColor;
 }
 
 .About-Header-Span {
-  /* color: #e4e3e3; */
-  color: rgb(88, 144, 218);
+  color: index.$altColor;
 }
 
 .has-border {
@@ -65,44 +54,24 @@
 }
 
 .About-Footer {
-  display: flex;
-  flex-direction: row;
+  @include index.row($height: 100%, $width: 100%);
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
 }
 
 .About-Contact {
-  border: none;
-  outline: none;
-  border-radius: 4rem;
+  @include index.row($height: fit-content, $width: fit-content);
+  @include index.button($height: fit-content, $width: fit-content);
   text-align: center;
-  display: flex;
   align-items: center;
-  width: fit-content;
-  height: fit-content;
   padding: 1.25rem 2rem;
-  border: 2px solid white;
-  color: rgb(21,21,21);
-  background: linear-gradient(to right, yellow 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
+  border: 0.2rem solid index.$backgroundColor;
   font-weight: 600;
   font-size: 1.75rem;
-  cursor: pointer;
 }
 
 .About-Contact:hover {
-  border: 2px solid rgb(21,21,21);
-  background-position: left bottom;
-  color: rgb(21,21,21);
-}
-
-.About-Contact:active {
-  background-color: rgb(21,21,21);
-  color: rgb(21,21,21);
+  border: 0.2rem solid index.$headingColor;
 }
 
 .About-Social {
@@ -115,18 +84,19 @@
 }
 
 .About-Link {
-  color: yellow;
+  color: index.$altColor;
   cursor: pointer;
   margin: 0;
   padding: 0;
 }
 
 .About-Link:hover {
-  color: white;
+  color: index.$headingColor;
 }
 
 .About-Seperator {
   margin: 0 1rem;
+  background-color: index.$headingColor;
 }
 
 @media only screen and (max-width: 1020px) {

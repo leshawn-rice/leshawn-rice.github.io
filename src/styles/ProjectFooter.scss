@@ -7,14 +7,14 @@
 
 .Project-Btn.Project-Link {
   @include index.button(
-    $width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: index.$lightColor, $hoverColor: index.$altColor, $textColor: index.$darkColor
+    $width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: index.$headingColor, $hoverColor: index.$altColor, $textColor: index.$backgroundColor
   );
   border: 2px solid white;
 }
 
 .Project-Btn.Project-Source {
   @include index.button(
-    $width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: index.$darkColor, $hoverColor: index.$altColor, $textColor: index.$lightColor
+    $width: 15rem, $height: 5rem, $borderRadius: 5rem, $primaryColor: index.$backgroundColor, $hoverColor: index.$altColor, $textColor: index.$headingColor
   );
   border: 2px solid white;
 }
