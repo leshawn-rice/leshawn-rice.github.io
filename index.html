@@ -47,27 +47,42 @@
     <!-- Style Customizer's stylesheets END -->
 
     <!-- Skin stylesheet -->
+    <!-- TODO: Add Google Analytics tag here -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R744W7N5G2"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag("js", new Date());
-
-        gtag("config", "G-R744W7N5G2");
-    </script>
     <!--Google Analytics -->
 
 </head>
 
 <body data-spy="scroll" data-target="#menu">
     <div class="over-loader loader-live">
-        <div class="loader">
-            <div class="loader-item style4">
+        <div class="loader" style="display: flex; flex-direction: column; align-items: center;">
+            <div class="loader-item style3 ">
                 <div class="cube1"></div>
                 <div class="cube2"></div>
+                <div class="cube3"></div>
+                <div class="cube4"></div>
             </div>
+            <h5 id="loading-text" style="text-align: center;">
+                <script>
+                    const phrases = [
+                        "Pinging Skynet...",
+                        "Artificially Waiting...",
+                        "Downloading more RAM...",
+                        "Hacking into the mainframe...",
+                        "One does not simply load a page...",
+                        "Decrypting funny loading messages...",
+                        "Bribing the server for speed...",
+                        "Deploying to localhost...",
+                        "Aligning pixels for maximum precision...",
+                        "Waiting for AI to take over...",
+                        "Loading... but in a totally cool way",
+                        "Compressing reality into bytes..."
+                    ];
+                    const phraseIdx = Math.floor(Math.random() * phrases.length);
+                    const loadingTextElement = document.getElementById("loading-text");
+                    loadingTextElement.innerText = phrases[phraseIdx];
+                </script>
+            </h5>
         </div>
     </div>
     <!--end loading-->
