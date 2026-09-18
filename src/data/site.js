@@ -141,7 +141,7 @@ export const projects = [
   {
     name: 'FreeBooks',
     repo: 'freebooks',
-    desc: 'A command-line tool that decrypts Audible AAX files and converts them to MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks`.',
+    desc: 'A command-line tool that converts Audible AAX files into MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks`.',
     tags: ['Python', 'CLI', 'PyPI'],
   },
   {
@@ -149,12 +149,6 @@ export const projects = [
     repo: 'jenkins-setup',
     desc: 'An Ansible playbook that stands up a Jenkins controller from nothing: security realm, credentials, CLI access and API key bootstrapping, all templated rather than clicked through a setup wizard.',
     tags: ['Ansible', 'Jenkins', 'Python'],
-  },
-  {
-    name: 'This Site',
-    repo: 'leshawn-rice.github.io',
-    desc: 'Vite and React with no UI framework. A GitHub Action builds it and publishes to gh-pages by committing a tree written straight from the build output, so nothing is copied or deleted on disk.',
-    tags: ['React', 'Vite', 'GitHub Actions'],
   },
 ];
 
