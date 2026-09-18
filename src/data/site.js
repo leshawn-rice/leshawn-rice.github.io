@@ -139,6 +139,12 @@ export const projects = [
     tags: ['Terraform', 'Azure', 'Module Registry'],
   },
   {
+    name: 'Azure Container Group',
+    repo: 'terraform-azurerm-container-group',
+    desc: 'Wraps Azure Container Instances with a typed `containers` input, so a group declares several containers with their own images, resource limits, commands, ports and secure environment variables. Joins a virtual network by subnet, and derives its own name and tags from the naming and tagging modules.',
+    tags: ['Terraform', 'Azure', 'ACI'],
+  },
+  {
     name: 'FreeBooks',
     repo: 'freebooks',
     desc: 'A command-line tool that converts Audible AAX files into MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks`.',
