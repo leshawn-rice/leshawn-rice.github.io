@@ -1,0 +1,21 @@
+{
+  "name": "leshawn-rice-portfolio",
+  "private": true,
+  "version": "3.0.0",
+  "type": "module",
+  "description": "Personal site for Leshawn Rice - Platform Engineer",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.2",
+    "sass-embedded": "^1.92.1",
+    "vite": "^7.1.5"
+  }
+}

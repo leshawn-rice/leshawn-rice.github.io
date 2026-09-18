@@ -1,0 +1,60 @@
+@use 'mixins' as m;
+
+.experience {
+  &__grid {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.xp-card {
+  @include m.card;
+
+  display: flex;
+  flex-direction: column;
+
+  &__icon {
+    @include m.card-icon;
+  }
+
+  &:hover &__icon {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  &__company {
+    margin: 0 0 2px;
+    color: var(--accent-ink);
+    font-family: var(--font-head);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &__title {
+    margin: 0 0 4px;
+    font-size: 20px;
+  }
+
+  &__period {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  &__text {
+    margin: 0 0 14px;
+    font-size: 14.5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .experience__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

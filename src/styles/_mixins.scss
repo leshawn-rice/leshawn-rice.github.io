@@ -1,0 +1,31 @@
+// Shared card shell used by the experience and education grids.
+@mixin card {
+  position: relative;
+  padding: 36px 32px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+
+  &:hover {
+    border-color: rgb(162 119 255 / 45%);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+}
+
+@mixin card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(162 119 255 / 30%);
+  border-radius: 50%;
+  background: rgb(162 119 255 / 8%);
+  color: var(--accent-ink);
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
