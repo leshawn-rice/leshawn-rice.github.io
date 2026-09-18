@@ -139,10 +139,10 @@ export const projects = [
     tags: ['Terraform', 'Azure', 'Module Registry'],
   },
   {
-    name: 'Azure Module Library',
-    repo: 'terraform-modules',
-    desc: 'An umbrella repo collecting composable Azure modules — resource groups, naming, tags, subnets, virtual networks, container groups and subscriptions — tracked as submodules so stacks can pin what they consume.',
-    tags: ['Terraform', 'Azure'],
+    name: 'FreeBooks',
+    repo: 'freebooks',
+    desc: 'A command-line tool that decrypts Audible AAX files and converts them to MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks` — and it ships the native tables and binaries it depends on, so the install is self-contained.',
+    tags: ['Python', 'CLI', 'PyPI'],
   },
   {
     name: 'Jenkins Provisioning',
