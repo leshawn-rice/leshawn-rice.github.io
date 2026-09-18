@@ -64,7 +64,7 @@ export const about = {
   eyebrow: 'Brief History',
   heading: 'A Platform Engineer with a passion for automating everything',
   body: [
-    "I'm a **results-oriented** Platform Engineer with **4+ years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
+    "I'm a **results-oriented** Platform Engineer with **5 years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
     'These days I spend most of my time on the **internal developer platform** — the paved paths, tooling, and guardrails that let engineering teams ship without fighting their infrastructure. I have a strong background in **Linux operations**, **Infrastructure as Code**, **containers**, **observability**, and **source control**, with regular PagerDuty-managed on-call coverage.',
   ],
   // rendered into a two-column grid, filling row by row
@@ -86,8 +86,8 @@ export const experience = [
     period: 'March 2026 – Present',
     icon: 'platform',
     body: [
-      "I build BBSI's **internal developer platform**, giving development teams **self-service deployment** through pre-approved patterns. Work that used to wait weeks on tickets, approvals and hand-built pipelines now ships on demand — without loosening security or compliance review.",
-      'I also lead our **AI enablement** work, bringing AI-assisted tooling into the SDLC and partnering with engineering and security on the governance patterns that keep its use accountable.',
+      "I build BBSI's **internal developer platform**, giving development teams **self-service deployment** through pre-approved patterns. Work that used to wait weeks on tickets, approvals and hand-built pipelines now ships on demand.",
+      'Day to day, I build, maintain and support the **platforms and workflows** developers rely on — streamlining delivery into staging and production while keeping it aligned with our **security and compliance standards**.',
     ],
   },
   {
