@@ -86,10 +86,8 @@ export const experience = [
     period: 'March 2026 – Present',
     icon: 'platform',
     body: [
-      "I build and own BBSI's **internal developer platform**, which lets developers deploy their own applications into our internal cloud infrastructure through **pre-approved patterns**, instead of waiting on someone else to do it for them.",
-      'The old path was a ticket: weeks of queueing and approvals while DevOps stood up the infrastructure by hand and wrote a CI/CD pipeline to match. Now a developer clicks a button and the platform provisions the **infrastructure**, deploys the **application**, and wires up **CI/CD** behind it. Because the patterns are vetted up front, self-service doesn\'t mean giving up security or compliance review.',
-      'On the AI side, I brought **AI-assisted test generation** into our SDLC and built the pipelines that vet and onboard proposed **skills and MCP servers** into our agentic environments, so new capabilities arrive through a reviewed path instead of ad hoc.',
-      'I work with engineering and security to define the **governance patterns for responsible AI use** — an approved tool and model allowlist, rules for what data may reach a model, a security review before anything is adopted, and usage logging that holds up to audit.',
+      "I build BBSI's **internal developer platform**, giving development teams **self-service deployment** through pre-approved patterns. Work that used to wait weeks on tickets, approvals and hand-built pipelines now ships on demand — without loosening security or compliance review.",
+      'I also lead our **AI enablement** work, bringing AI-assisted tooling into the SDLC and partnering with engineering and security on the governance patterns that keep its use accountable.',
     ],
   },
   {
@@ -98,10 +96,9 @@ export const experience = [
     period: 'August 2022 – March 2026',
     icon: 'cloud',
     body: [
-      'I wrote the **Terraform** Infrastructure as Code behind **15+ development and production environments** across multiple regions — Azure-primary on **AKS**, with on-premise **VMware/vSphere** as the secondary — which raised deployment consistency and cut manual infrastructure setup.',
-      'I built and maintained the **Kubernetes CI/CD pipelines**, with Azure Pipelines driving **Helm** releases to promote services between environments, improving release reliability while satisfying audit and security requirements.',
-      'I designed an **internal systems API** in **Node.js** exposing host and service health, infrastructure inventory, and secret and certificate expiry — with alarms that opened tickets automatically before anything lapsed. It gave us real platform visibility and cut troubleshooting time during outages.',
-      'I also **led the technical due diligence** on a major platform investment, and supported production in a **PagerDuty on-call rotation**, responding to incidents and coordinating resolution across infrastructure and application teams.',
+      'I managed a fleet of on-premise **vSphere** development environments, automated largely in **PowerShell**, and wrote the **Terraform** behind our cloud environments — including rebuilding the on-premise estate as code during a datacenter migration.',
+      'I built and maintained **Kubernetes** delivery pipelines using **Helm** and Azure Pipelines, and designed an internal monitoring API that gave the team one view of platform health and caught problems before they became outages.',
+      'I led the technical due diligence on a major platform investment and carried **PagerDuty on-call** for production services.',
     ],
   },
   {
@@ -110,10 +107,9 @@ export const experience = [
     period: 'August 2021 – August 2022',
     icon: 'monitor',
     body: [
-      'I rewrote the **health-check workflow** covering every cloud VM behind our networking fleet: database health, backup presence, CPU, memory and storage headroom, SSH reachability. The original ran serially; I rebuilt it, added checks, and parallelised the SSH work with **Python threading**, taking a full run from **over 24 hours to roughly one**.',
-      'I owned **multi-factor authentication** for our custom OpenVPN platform end to end — the backend service, the frontend toggles, the database schema, and a PowerShell-built **client installer** that set up the connection for the user.',
-      'I built an **end-to-end testing framework** for the whole product stack, running on a virtualised environment of VMs that simulated the cloud servers and on-site hardware wired together the way a real deployment would be. It exercised cloud-to-hardware communication, **Snort** detection and blocking, allow/deny listing, and MSP sub-client onboarding — and hosting it that way avoided an estimated **$10k a year** against what the same workloads would have cost us in AWS.',
-      'I used **Ansible** to automate environment setup and configuration tasks across internal systems.',
+      'I rebuilt a legacy fleet health-check workflow in **Python**, parallelising its checks to take a full run from **over 24 hours to roughly one** and turning it into something the team could act on.',
+      'I delivered **multi-factor authentication** for a custom OpenVPN platform end to end — backend, frontend, data model and client installer.',
+      'I built an **end-to-end test environment** that simulated the full product stack on virtualised infrastructure, avoiding an estimated **$10k a year** in cloud spend, and automated environment setup across internal systems with **Ansible**.',
     ],
   },
 ];
