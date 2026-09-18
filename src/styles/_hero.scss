@@ -51,7 +51,7 @@
 
   &__title {
     max-width: 14ch;
-    margin: 0 0 34px;
+    margin: 0 0 26px;
     color: #fff;
     font-size: clamp(38px, 7vw, 76px);
     font-weight: 600;
@@ -60,9 +60,25 @@
     animation-delay: 0.3s;
   }
 
+  &__tagline {
+    max-width: 24ch;
+    margin: 0 0 34px;
+    color: rgb(255 255 255 / 82%);
+    font-size: clamp(17px, 2.1vw, 23px);
+    font-weight: 400;
+    line-height: 1.45;
+    animation: hero-in 0.9s var(--ease) both;
+    animation-delay: 0.42s;
+  }
+
+  // a slide with no eyebrow shouldn't leave a gap where one would be
+  &__title:first-child {
+    margin-top: 0;
+  }
+
   .btn {
     animation: hero-in 0.9s var(--ease) both;
-    animation-delay: 0.5s;
+    animation-delay: 0.55s;
   }
 
   &__dots {

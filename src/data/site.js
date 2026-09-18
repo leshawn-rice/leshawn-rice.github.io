@@ -43,17 +43,19 @@ export const navLinks = [
   { id: 'education', label: 'Education & Certifications' },
 ];
 
+// `lead` sits above the title (small, spaced, uppercase); `tagline` sits below
+// it as a full sentence. A slide uses one or the other, not both.
 export const slides = [
   {
     image: sliderGrey,
-    lead: 'Experienced',
-    title: 'Platform Engineer',
+    title: 'Leshawn Rice',
+    tagline: 'I build the platforms other engineers ship on.',
     cta: 'Get in Touch!',
   },
   {
     image: sliderTl,
-    lead: 'Skilled',
-    title: 'Technical Coordinator',
+    lead: 'Experienced',
+    title: 'Platform Engineer',
     cta: 'Get in Touch!',
   },
 ];

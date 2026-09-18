@@ -31,12 +31,19 @@ export default function Hero() {
           <div className="hero__scrim" />
           <div className="container hero__content">
             {/* keyed so the entrance animation replays on every slide change */}
-            <p className="hero__lead" key={`lead-${index}`}>
-              {slide.lead}
-            </p>
+            {slide.lead && (
+              <p className="hero__lead" key={`lead-${index}`}>
+                {slide.lead}
+              </p>
+            )}
             <h1 className="hero__title" key={`title-${index}`}>
               {slide.title}
             </h1>
+            {slide.tagline && (
+              <p className="hero__tagline" key={`tagline-${index}`}>
+                {slide.tagline}
+              </p>
+            )}
             <a className="btn btn--light" href="#contact" key={`cta-${index}`}>
               {slide.cta}
             </a>
