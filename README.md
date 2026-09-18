@@ -65,6 +65,11 @@ transparent PNGs.
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and
-publishes `dist/` to the `gh-pages` branch. GitHub Pages serves that branch.
+replaces the contents of `gh-pages` with `dist/`.
 
-`gh-pages` is a build artefact — never commit to it by hand.
+That is the whole job. GitHub Pages is configured to serve the `gh-pages`
+branch, so GitHub's own "pages build and deployment" run publishes it as soon
+as the branch changes — the workflow does not deploy anything itself.
+
+The branch's history is kept and only its files are swapped, so a bad deploy
+can be reverted. `gh-pages` is a build artefact — never commit to it by hand.

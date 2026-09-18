@@ -65,7 +65,7 @@ export const about = {
   heading: 'A Platform Engineer with a passion for automating everything',
   body: [
     "I'm a **results-oriented** Platform Engineer with **5 years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
-    'These days I spend most of my time on the **internal developer platform** — the paved paths, tooling, and guardrails that let engineering teams ship without fighting their infrastructure. I have a strong background in **Linux operations**, **Infrastructure as Code**, **containers**, **observability**, and **source control**, with regular PagerDuty-managed on-call coverage.',
+    'I work across the whole delivery path, from the infrastructure underneath to the pipelines that carry code into production. My background covers **Linux operations**, **Infrastructure as Code**, **containers**, **observability**, and **source control**, with regular PagerDuty-managed on-call coverage.',
   ],
   // rendered into a two-column grid, filling row by row
   highlights: [

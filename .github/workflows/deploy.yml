@@ -1,20 +1,27 @@
 name: Deploy
 
+# Builds the site and replaces the contents of gh-pages with the output.
+#
+# That is all this needs to do. GitHub Pages is configured to serve the
+# gh-pages branch, so GitHub runs its own "pages build and deployment" job
+# whenever that branch changes - which is the deploy you already have. This
+# workflow only has to put the built files there.
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
-# Only one deploy at a time; a newer push supersedes an in-flight one.
+# One publish at a time; a newer push supersedes an in-flight one.
 concurrency:
-  group: deploy-gh-pages
+  group: publish-gh-pages
   cancel-in-progress: true
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,14 +37,32 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Publish to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          # dist/ carries its own CNAME from public/, so Pages keeps the
-          # custom domain across deploys.
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
-          commit_message: "Deploy ${{ github.sha }}"
+      - name: Replace gh-pages with the build output
+        run: |
+          set -euo pipefail
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Check gh-pages out beside the repo. Its history is kept; only the
+          # files are swapped, so a bad deploy stays revertable.
+          git fetch origin gh-pages:gh-pages
+          git worktree add ../site gh-pages
+
+          # Wipe everything except .git, then lay down the fresh build. This
+          # removes files that no longer exist in dist/, which a plain copy
+          # would leave behind. dist/ carries its own CNAME and .nojekyll from
+          # public/, so the custom domain survives.
+          find ../site -mindepth 1 -maxdepth 1 -not -name .git -exec rm -rf {} +
+          cp -r dist/. ../site/
+
+          cd ../site
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Built output is identical to what is already published; nothing to do."
+            exit 0
+          fi
+
+          git commit -m "Build ${GITHUB_SHA} from ${GITHUB_REF_NAME}"
+          git push origin gh-pages
