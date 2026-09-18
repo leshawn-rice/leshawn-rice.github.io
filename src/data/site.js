@@ -133,10 +133,10 @@ export const projects = [
     tags: ['Terraform', 'Azure', 'GitHub Actions'],
   },
   {
-    name: 'Azure Subscription Module',
-    repo: 'terraform-azurerm-subscription',
-    desc: 'Provisions Azure subscriptions with naming and tagging composed from registry-published modules, so every subscription arrives with consistent identity and metadata rather than whatever the operator typed.',
-    tags: ['Terraform', 'Azure', 'Module Registry'],
+    name: 'Grabafone',
+    repo: 'grabafone',
+    desc: 'A REST API over scraped cellular device data, with API-key authentication, user management and a Swagger UI for exploring the endpoints. Express and PostgreSQL behind it, a Python seeder loading the data, and a React front end on top.',
+    tags: ['Node.js', 'PostgreSQL', 'Swagger'],
   },
   {
     name: 'Azure Container Group',
