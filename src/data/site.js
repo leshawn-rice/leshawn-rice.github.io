@@ -5,8 +5,6 @@ import aws from '../assets/tools/aws.svg';
 import azure from '../assets/tools/azure.svg';
 import azureDevops from '../assets/tools/azure-devops.png';
 import docker from '../assets/tools/docker.svg';
-import githubActions from '../assets/tools/github-actions.svg';
-import helm from '../assets/tools/helm.svg';
 import kubernetes from '../assets/tools/kubernetes.svg';
 import powershell from '../assets/tools/powershell.png';
 import python from '../assets/tools/python.svg';
@@ -138,27 +136,74 @@ export const projects = [
 export const toolCategories = [
   { id: 'all', label: 'All' },
   { id: 'iac', label: 'Infrastructure as Code' },
-  { id: 'containers', label: 'Containers & Orchestration' },
-  { id: 'cicd', label: 'CI/CD' },
+  { id: 'delivery', label: 'Containers & Delivery' },
   { id: 'cloud', label: 'Cloud & Virtualization' },
   { id: 'scripting', label: 'Scripting & Automation' },
 ];
 
-// Deliberately short. A wall of logos flattens the things worth noticing, so
-// this is the set worth defending in an interview, not everything ever touched.
+// Ten tools, each with a line tying it to actual work rather than asserting
+// familiarity. Everything here traces to the experience cards or the repos.
 export const tools = [
-  { name: 'Terraform', desc: 'Infrastructure as Code', logo: terraform, tags: ['iac'] },
-  { name: 'Ansible', desc: 'Configuration Management', logo: ansible, tags: ['iac'] },
-  { name: 'Kubernetes', desc: 'Container Orchestration', logo: kubernetes, tags: ['containers'] },
-  { name: 'Docker', desc: 'Containerization', logo: docker, tags: ['containers'] },
-  { name: 'Helm', desc: 'Kubernetes Packaging', logo: helm, tags: ['containers', 'cicd'] },
-  { name: 'Azure DevOps', desc: 'Pipelines & Release', logo: azureDevops, tags: ['cicd'] },
-  { name: 'GitHub Actions', desc: 'Pipelines & Automation', logo: githubActions, tags: ['cicd'] },
-  { name: 'Azure', desc: 'Primary Cloud', logo: azure, tags: ['cloud'] },
-  { name: 'AWS', desc: 'Cloud Platform', logo: aws, tags: ['cloud'] },
-  { name: 'VMware', desc: 'On-Premise Virtualization', logo: vmware, tags: ['cloud'] },
-  { name: 'Python', desc: 'Automation & Tooling', logo: python, tags: ['scripting'] },
-  { name: 'PowerShell', desc: 'Windows Automation', logo: powershell, tags: ['scripting'] },
+  {
+    name: 'Terraform',
+    logo: terraform,
+    tags: ['iac'],
+    note: 'Wrote the modules and stacks behind multi-region cloud environments, and rebuilt an on-premise estate as code during a datacenter migration.',
+  },
+  {
+    name: 'Ansible',
+    logo: ansible,
+    tags: ['iac'],
+    note: 'Automated environment setup and configuration across internal systems, including a playbook that provisions a Jenkins controller end to end.',
+  },
+  {
+    name: 'Kubernetes',
+    logo: kubernetes,
+    tags: ['delivery'],
+    note: 'Built and maintained the pipelines that promote services between environments on AKS, and supported them on a PagerDuty on-call rotation.',
+  },
+  {
+    name: 'Docker',
+    logo: docker,
+    tags: ['delivery'],
+    note: 'Containerised the services those pipelines deliver, and the workloads running on Azure Container Instances.',
+  },
+  {
+    name: 'Azure DevOps',
+    logo: azureDevops,
+    tags: ['delivery'],
+    note: 'Ran the release pipelines that move services from one environment to the next, with builds, boards and repositories alongside them.',
+  },
+  {
+    name: 'Azure',
+    logo: azure,
+    tags: ['cloud'],
+    note: 'Primary cloud across four years — AKS, container instances, virtual networks and subscription provisioning. Microsoft certified (AZ-900).',
+  },
+  {
+    name: 'AWS',
+    logo: aws,
+    tags: ['cloud'],
+    note: 'The hosted half of a hybrid estate at Uplevel, where cloud instances backed the on-premise networking hardware customers ran.',
+  },
+  {
+    name: 'VMware',
+    logo: vmware,
+    tags: ['cloud'],
+    note: 'Managed a fleet of on-premise vSphere development environments, automated rather than clicked through vCenter.',
+  },
+  {
+    name: 'Python',
+    logo: python,
+    tags: ['scripting'],
+    note: 'Rebuilt a fleet health-check workflow from a 24-hour serial run to roughly an hour by parallelising it. Also ships a CLI on PyPI.',
+  },
+  {
+    name: 'PowerShell',
+    logo: powershell,
+    tags: ['scripting'],
+    note: 'The automation language behind the on-premise vSphere estate, and the client installer that set up OpenVPN for end users.',
+  },
 ];
 
 export const education = [

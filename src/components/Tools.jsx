@@ -42,11 +42,13 @@ export default function Tools() {
         <ul className="tools__grid">
           {visible.map((tool) => (
             <li key={tool.name} className="tool">
-              <div className="tool__plate">
+              <span className="tool__plate">
                 <img src={tool.logo} alt={`${tool.name} logo`} loading="lazy" decoding="async" />
-              </div>
-              <p className="tool__name">{tool.name}</p>
-              <p className="tool__desc">{tool.desc}</p>
+              </span>
+              <span className="tool__body">
+                <span className="tool__name">{tool.name}</span>
+                <span className="tool__note">{tool.note}</span>
+              </span>
             </li>
           ))}
         </ul>
