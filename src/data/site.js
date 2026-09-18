@@ -63,12 +63,15 @@ export const about = {
     "I'm a **results-oriented** Platform Engineer with **4+ years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
     'These days I spend most of my time on the **internal developer platform** — the paved paths, tooling, and guardrails that let engineering teams ship without fighting their infrastructure. I have a strong background in **Linux operations**, **Infrastructure as Code**, **containers**, **observability**, and **source control**, with regular PagerDuty-managed on-call coverage.',
   ],
+  // rendered into a two-column grid, filling row by row
   highlights: [
     { text: 'Skilled Technical Coordinator' },
+    { text: 'Internal developer platforms & golden paths' },
     { text: 'CI/CD, GitOps & release automation' },
     { text: 'Infrastructure as Code with Terraform & Ansible' },
     { text: 'Kubernetes & Helm-based delivery' },
     { text: 'Observability & production on-call' },
+    { text: 'AI enablement & governance' },
     { text: 'Coin Collector' },
   ],
 };
@@ -80,8 +83,9 @@ export const experience = [
     period: 'March 2026 – Present',
     icon: 'platform',
     body: [
-      'I led the build of the **internal Developer Platform** that streamlined our SDLC and took the friction out of getting code from a branch into production.',
-      'I integrated **AI-assisted tooling** into our development workflows to improve developer productivity and accelerate code delivery, and I partner with the engineering and security teams to establish **governance patterns for responsible AI use** that line up with our security and compliance requirements.',
+      "I build and own BBSI's **internal developer platform**: self-service environments, **golden-path service templates**, reusable pipeline templates, and a service catalog that gives teams one place to find what exists, who owns it, and how to ship it.",
+      'On the AI side, I brought **AI-assisted test generation** into our SDLC and built the pipelines that vet and onboard proposed **skills and MCP servers** into our agentic environments, so new capabilities arrive through a reviewed path instead of ad hoc.',
+      'I work with engineering and security to define the **governance patterns for responsible AI use** — an approved tool and model allowlist, rules for what data may reach a model, a security review before anything is adopted, and usage logging that holds up to audit.',
     ],
   },
   {
@@ -90,10 +94,10 @@ export const experience = [
     period: 'August 2022 – March 2026',
     icon: 'cloud',
     body: [
-      'I wrote the **Terraform-based Infrastructure as Code** that provisions and manages our **15+ development and production environments** across multiple regions, improving deployment consistency and cutting manual infrastructure setup.',
-      'I built and maintained **Kubernetes-based CI/CD pipelines** using Helm charts to deploy and promote services across environments, improving release reliability while satisfying audit and security requirements. I also designed an **internal systems API** exposing operational and monitoring data, which improved platform visibility and reduced outage troubleshooting time.',
-      ' I led the **technical evaluation** of a multi-million dollar project.',
-      'Throughout, I supported production services in a **PagerDuty on-call rotation**, responding to incidents and coordinating resolution across infrastructure and application teams.',
+      'I wrote the **Terraform** Infrastructure as Code behind **15+ development and production environments** across multiple regions — Azure-primary on **AKS**, with on-premise **VMware/vSphere** as the secondary — which raised deployment consistency and cut manual infrastructure setup.',
+      'I built and maintained the **Kubernetes CI/CD pipelines**, with Azure Pipelines driving **Helm** releases to promote services between environments, improving release reliability while satisfying audit and security requirements.',
+      'I designed an **internal systems API** in **Node.js** exposing host and service health, infrastructure inventory, and secret and certificate expiry — with alarms that opened tickets automatically before anything lapsed. It gave us real platform visibility and cut troubleshooting time during outages.',
+      'I also **led the technical due diligence** on a major platform investment, and supported production in a **PagerDuty on-call rotation**, responding to incidents and coordinating resolution across infrastructure and application teams.',
     ],
   },
   {
@@ -102,9 +106,10 @@ export const experience = [
     period: 'August 2021 – August 2022',
     icon: 'monitor',
     body: [
-      'I refactored a **legacy monitoring workflow**, taking its runtime from over 24 hours down to under an hour and enabling near real-time operational insight through automation.',
-      'I implemented **multi-factor authentication** for a custom OpenVPN platform, coordinating the backend and frontend changes and delivering a dedicated client installer.',
-      'I designed the infrastructure for internal development environments in a hybrid cloud/on-prem setup, **reducing cloud-hosting costs by roughly $10k a year**, and used **Ansible** to automate environment setup and configuration tasks across internal systems.',
+      'Uplevel sells networking-as-a-service to MSPs — gateways, access points, switches and work-from-home boxes, paired with cloud services. I rewrote the **health-check workflow** covering every cloud VM behind that fleet: database health, backup presence, CPU, memory and storage headroom, SSH reachability. The original ran serially; I rebuilt it, added checks, and parallelised the SSH work with **Python threading**, taking a full run from **over 24 hours to roughly one**.',
+      'I owned **multi-factor authentication** for our custom OpenVPN platform end to end — the backend service, the frontend toggles, the database schema, and a PowerShell-built **client installer** that set up the connection for the user.',
+      'I built an **end-to-end testing framework** for the whole product stack, running on a virtualised environment of VMs that simulated the cloud servers and on-site hardware wired together the way a real deployment would be. It exercised cloud-to-hardware communication, **Snort** detection and blocking, allow/deny listing, and MSP sub-client onboarding — and hosting it that way avoided an estimated **$10k a year** against what the same workloads would have cost us in AWS.',
+      'I used **Ansible** to automate environment setup and configuration tasks across internal systems.',
     ],
   },
 ];
