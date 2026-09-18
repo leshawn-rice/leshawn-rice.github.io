@@ -6,20 +6,21 @@ import { rich } from '../lib/rich';
 export default function About() {
   return (
     <section id="about" className="section about">
-      <div className="container about__inner">
-        <div className="about__lede">
-          <SectionTitle eyebrow={about.eyebrow} heading={about.heading} align="left" />
-          <a className="btn btn--dark" href="#experience">
-            <Icon name="play" size={18} />
-            Know more
-          </a>
-        </div>
+      <div className="container">
+        <SectionTitle heading={about.heading} align="left" />
 
-        <div className="about__detail">
-          <div className="about__body">
-            {about.body.map((p, i) => (
-              <p key={i}>{rich(p)}</p>
-            ))}
+        <div className="about__cols">
+          <div className="about__lede">
+            <div className="about__body">
+              {about.body.map((p, i) => (
+                <p key={i}>{rich(p)}</p>
+              ))}
+            </div>
+
+            <a className="btn btn--dark" href="#experience">
+              <Icon name="play" size={18} />
+              Know more
+            </a>
           </div>
 
           <ul className="about__list">

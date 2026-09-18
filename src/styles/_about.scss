@@ -1,20 +1,21 @@
 .about {
-  // Split layout: the heading holds the left rail, the copy and checklist
-  // take the right. Keeps the section using the full container width instead
-  // of stacking everything into a narrow centred column.
-  &__inner {
-    display: grid;
-    gap: 50px 80px;
-    align-items: start;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  }
-
+  // Heading runs full width, then prose and the checklist sit side by side.
+  // Keeps the section using the whole container now that the heading is short
+  // enough that a left rail would leave it stranded in white space.
   .sec-title {
     max-width: none;
-    margin: 0 0 30px;
+    margin: 0 0 36px;
+  }
+
+  &__cols {
+    display: grid;
+    gap: 40px 70px;
+    align-items: start;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 
   &__body {
+    margin-bottom: 30px;
     font-size: 16px;
 
     p:last-child {
@@ -24,9 +25,8 @@
 
   &__list {
     display: grid;
-    gap: 12px 32px;
-    margin-top: 30px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+    padding-top: 4px;
 
     li {
       display: flex;
@@ -42,15 +42,9 @@
   }
 }
 
-@media (max-width: 991px) {
-  .about__inner {
-    gap: 34px;
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-@media (max-width: 599px) {
-  .about__list {
+@media (max-width: 767px) {
+  .about__cols {
+    gap: 30px;
     grid-template-columns: minmax(0, 1fr);
   }
 }

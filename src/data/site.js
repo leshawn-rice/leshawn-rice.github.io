@@ -64,8 +64,7 @@ export const slides = [
 ];
 
 export const about = {
-  eyebrow: 'Brief History',
-  heading: 'A Platform Engineer with a passion for automating everything',
+  heading: 'Brief History',
   body: [
     "I'm a **results-oriented** Platform Engineer with **5 years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
     'I work across the whole delivery path, from the infrastructure underneath to the pipelines that carry code into production. My background covers **Linux operations**, **Infrastructure as Code**, **containers**, **observability**, and **source control**, with regular PagerDuty-managed on-call coverage.',
@@ -227,14 +226,6 @@ export const education = [
       ['Certificate ID', '8a10a73f-851f-41dc-aa77-1c1e3eaf5724'],
     ],
   },
-];
-
-export const skillSet = [
-  'Team Leader',
-  'Strong Communicator',
-  'Automation Machine',
-  'Cloud Wizard',
-  'Incident Responder',
 ];
 
 export const loaderPhrases = [

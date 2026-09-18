@@ -20,7 +20,7 @@ export default function Projects() {
   return (
     <section id="projects" className="section projects">
       <div className="container">
-        <SectionTitle eyebrow="Projects" heading="Things I've built in the open" />
+        <SectionTitle heading="Projects" />
 
         <ul className="projects__grid">
           {projects.map((project) => {

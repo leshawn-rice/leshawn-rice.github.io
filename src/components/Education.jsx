@@ -7,10 +7,7 @@ export default function Education() {
   return (
     <section id="education" className="section section--light education">
       <div className="container">
-        <SectionTitle
-          eyebrow="Education & Certifications"
-          heading="Lessons Learned, Badges Earned"
-        />
+        <SectionTitle heading="Education & Certifications" />
 
         <ul className="education__grid">
           {education.map((item) => (

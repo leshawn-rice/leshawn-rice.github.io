@@ -7,10 +7,7 @@ export default function Experience() {
   return (
     <section id="experience" className="section section--light experience">
       <div className="container">
-        <SectionTitle
-          eyebrow="Professional Experience"
-          heading="Where I've been and what I've done"
-        />
+        <SectionTitle heading="Professional Experience" />
 
         <ol className="experience__grid">
           {experience.map((role) => (

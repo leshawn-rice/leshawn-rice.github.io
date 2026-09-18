@@ -1,6 +1,6 @@
 import Icon from './Icon';
 import Logo from './Logo';
-import { contact, navLinks, RESUME_URL, skillSet } from '../data/site';
+import { contact, navLinks, RESUME_URL } from '../data/site';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -28,14 +28,6 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="footer__col">
-          <h2 className="footer__heading">Skill Set</h2>
-          <ul className="footer__links footer__links--plain">
-            {skillSet.map((skill) => (
-              <li key={skill}>{skill}</li>
-            ))}
-          </ul>
-        </div>
 
         <div className="footer__col">
           <h2 className="footer__heading">Contact Me</h2>
