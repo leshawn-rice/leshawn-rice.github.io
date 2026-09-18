@@ -49,7 +49,7 @@ export const slides = [
   {
     image: sliderGrey,
     title: 'Leshawn Rice',
-    tagline: 'I build the platforms other engineers ship on.',
+    tagline: 'Fewer tickets. Faster deploys.',
     cta: 'Get in Touch!',
   },
   {
