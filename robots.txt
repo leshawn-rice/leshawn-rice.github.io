@@ -1,3 +1,4 @@
 User-agent: *
+Allow: /
 
-Sitemap: https://leshawnrice.com/sitemap_index.xml
+Sitemap: https://www.leshawnrice.com/sitemap.xml
