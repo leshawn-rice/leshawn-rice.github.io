@@ -1,20 +1,31 @@
 .about {
+  // Split layout: the heading holds the left rail, the copy and checklist
+  // take the right. Keeps the section using the full container width instead
+  // of stacking everything into a narrow centred column.
   &__inner {
-    max-width: 900px;
+    display: grid;
+    gap: 50px 80px;
+    align-items: start;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  }
+
+  .sec-title {
+    max-width: none;
+    margin: 0 0 30px;
   }
 
   &__body {
-    max-width: 760px;
-    margin: 0 auto 34px;
     font-size: 16px;
-    text-align: center;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
     display: grid;
-    gap: 10px 36px;
-    max-width: 760px;
-    margin: 0 auto 40px;
+    gap: 12px 32px;
+    margin-top: 30px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     li {
@@ -29,28 +40,17 @@
     margin-top: 5px;
     color: var(--accent);
   }
+}
 
-  .btn {
-    display: inline-flex;
-    margin: 0 auto;
-  }
-
-  &__inner {
-    text-align: center;
-  }
-
-  &__list li {
-    text-align: left;
+@media (max-width: 991px) {
+  .about__inner {
+    gap: 34px;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 599px) {
   .about__list {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  // centred copy gets ragged at phone widths
-  .about__body {
-    text-align: left;
   }
 }
