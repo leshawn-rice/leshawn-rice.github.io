@@ -46,23 +46,12 @@ jobs:
 
           git fetch --no-tags --depth=1 origin gh-pages
 
-          # Build a git tree object straight out of dist/ using a throwaway
-          # index, then commit it with the current gh-pages tip as its parent.
-          # Nothing is deleted or copied on disk: the commit's tree *is* dist/,
-          # so files dropped from the build simply aren't in it. History is
-          # kept, so a bad deploy stays revertable.
-          #
-          # The index must not already exist - git rejects an empty file as an
-          # index - so take a directory and name the file inside it.
           GIT_INDEX_FILE="$(mktemp -d)/index"; export GIT_INDEX_FILE
 
           git --work-tree=dist add -A
           tree="$(git write-tree)"
           parent="$(git rev-parse FETCH_HEAD)"
 
-          # If $commit below were ever empty the refspec would read
-          # ":refs/heads/gh-pages", which DELETES the branch and takes the site
-          # down. Refuse to continue on anything unset or empty.
           : "${tree:?failed to write a tree from dist/}"
           : "${parent:?could not resolve the current gh-pages tip}"
 

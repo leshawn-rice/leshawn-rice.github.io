@@ -32,8 +32,6 @@ export const contact = {
   name: 'Leshawn Rice',
   role: 'Platform Engineer',
   city: 'Vancouver, Washington',
-  phone: '+1 (425) 314-0862',
-  phoneHref: 'tel:+14253140862',
   email: 'leshawn.rice@outlook.com',
   linkedin: 'https://www.linkedin.com/in/leshawn-rice/',
   github: 'https://www.github.com/leshawn-rice/',

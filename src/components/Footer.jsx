@@ -48,13 +48,6 @@ export default function Footer() {
               </span>
             </li>
             <li>
-              <Icon name="phone" size={18} />
-              <span>
-                <strong>Phone</strong>
-                <a href={contact.phoneHref}>{contact.phone}</a>
-              </span>
-            </li>
-            <li>
               <Icon name="mail" size={18} />
               <span>
                 <strong>Email</strong>
