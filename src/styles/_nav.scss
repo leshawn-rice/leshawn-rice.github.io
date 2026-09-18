@@ -22,10 +22,12 @@
     justify-content: space-between;
   }
 
-  &__logo img {
-    display: block;
-    width: auto;
-    height: 46px;
+  // over the dark hero the tile goes purple; once the bar is white it goes ink
+  &:not(.is-stuck) &__logo .logo {
+    --logo-tile: var(--accent);
+    --logo-cursor: rgb(255 255 255 / 70%);
+    --logo-dot: var(--accent-soft);
+    --logo-ink: #fff;
   }
 
   &__toggle {

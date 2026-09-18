@@ -10,9 +10,9 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  &__logo {
-    width: 110px;
-    height: auto;
+  .logo {
+    --logo-mark: 46px;
+    --logo-type: 23px;
   }
 
   &__heading {

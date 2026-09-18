@@ -1,5 +1,5 @@
 import Icon from './Icon';
-import logo from '../assets/brand/logo-dark.png';
+import Logo from './Logo';
 import { contact, navLinks, RESUME_URL, skillSet } from '../data/site';
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
     <footer id="contact" className="footer">
       <div className="container footer__grid">
         <div className="footer__col">
-          <img className="footer__logo" src={logo} alt="Leshawn Rice" width="148" height="88" />
+          <Logo />
         </div>
 
         <div className="footer__col">

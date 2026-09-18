@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Icon from './Icon';
-import logoLight from '../assets/brand/logo-light.png';
-import logoDark from '../assets/brand/logo-dark.png';
+import Logo from './Logo';
 import { navLinks, RESUME_URL } from '../data/site';
 import { useScrollSpy } from '../lib/useScrollSpy';
 
@@ -22,14 +21,9 @@ export default function Nav() {
   return (
     <header className={`nav${stuck ? ' is-stuck' : ''}${open ? ' is-open' : ''}`}>
       <div className="nav__inner container">
-        <a className="nav__logo" href="#home" onClick={() => setOpen(false)}>
-          {/* the wordmark ships in two tones; swap once the bar goes solid white */}
-          <img
-            src={stuck ? logoDark : logoLight}
-            alt="Leshawn Rice"
-            width="147"
-            height="88"
-          />
+        <a className="nav__logo" href="#home" aria-label="Leshawn Rice - home"
+          onClick={() => setOpen(false)}>
+          <Logo />
         </a>
 
         <button
