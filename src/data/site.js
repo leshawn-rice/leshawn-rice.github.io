@@ -1,4 +1,3 @@
-import heroDashboard from '../assets/hero/hero-dashboard.jpg';
 import heroFiber from '../assets/hero/hero-fiber.jpg';
 
 import ansible from '../assets/tools/ansible.svg';
@@ -46,22 +45,13 @@ export const navLinks = [
   { id: 'education', label: 'Education & Certifications' },
 ];
 
-// `lead` sits above the title (small, spaced, uppercase); `tagline` sits below
-// it as a full sentence. A slide uses one or the other, not both.
-export const slides = [
-  {
-    image: heroDashboard,
-    title: 'Leshawn Rice',
-    tagline: 'Fewer tickets. Faster deploys.',
-    cta: 'Get in Touch!',
-  },
-  {
-    image: heroFiber,
-    lead: 'Experienced',
-    title: 'Platform Engineer',
-    cta: 'Get in Touch!',
-  },
-];
+export const hero = {
+  image: heroFiber,
+  title: 'Leshawn Rice',
+  role: 'Platform Engineer',
+  tagline: 'Fewer tickets. Faster deploys.',
+  cta: 'Get in Touch!',
+};
 
 export const about = {
   heading: 'Brief History',

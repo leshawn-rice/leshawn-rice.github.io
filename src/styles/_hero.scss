@@ -1,25 +1,12 @@
 .hero {
   position: relative;
+  display: flex;
   overflow: hidden;
+  align-items: center;
   min-height: 100svh;
-  background: #0c1a14;
-
-  &__slide {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    background-position: center right;
-    background-size: cover;
-    opacity: 0;
-    transition: opacity 1s var(--ease);
-    pointer-events: none;
-
-    &.is-active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
+  background-color: #0c1a14;
+  background-position: center right;
+  background-size: cover;
 
   &__scrim {
     position: absolute;
@@ -37,25 +24,25 @@
     padding-top: 90px;
   }
 
-  &__lead {
-    margin: 0 0 4px;
-    color: var(--accent-soft);
-    font-family: var(--font-head);
-    font-size: clamp(16px, 2vw, 22px);
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    animation: hero-in 0.9s var(--ease) both;
-    animation-delay: 0.15s;
-  }
-
+  // Name, then role, then the line - each a step lighter than the one above.
   &__title {
     max-width: 14ch;
-    margin: 0 0 26px;
+    margin: 0 0 10px;
     color: #fff;
     font-size: clamp(38px, 7vw, 76px);
     font-weight: 600;
     line-height: 1.05;
+    animation: hero-in 0.9s var(--ease) both;
+    animation-delay: 0.15s;
+  }
+
+  &__role {
+    margin: 0 0 18px;
+    color: #fff;
+    font-family: var(--font-head);
+    font-size: clamp(21px, 3vw, 34px);
+    font-weight: 400;
+    line-height: 1.2;
     animation: hero-in 0.9s var(--ease) both;
     animation-delay: 0.3s;
   }
@@ -63,48 +50,17 @@
   &__tagline {
     max-width: 34ch;
     margin: 0 0 34px;
-    color: rgb(255 255 255 / 82%);
-    font-size: clamp(17px, 2.1vw, 23px);
+    color: rgb(255 255 255 / 78%);
+    font-size: clamp(16px, 2vw, 21px);
     font-weight: 400;
     line-height: 1.45;
     animation: hero-in 0.9s var(--ease) both;
     animation-delay: 0.42s;
   }
 
-  // a slide with no eyebrow shouldn't leave a gap where one would be
-  &__title:first-child {
-    margin-top: 0;
-  }
-
   .btn {
     animation: hero-in 0.9s var(--ease) both;
     animation-delay: 0.55s;
-  }
-
-  &__dots {
-    position: absolute;
-    z-index: 3;
-    bottom: 38px;
-    left: 50%;
-    display: flex;
-    gap: 10px;
-    transform: translateX(-50%);
-
-    button {
-      width: 34px;
-      height: 4px;
-      padding: 0;
-      border: 0;
-      border-radius: 999px;
-      background: rgb(255 255 255 / 35%);
-      cursor: pointer;
-      transition: background-color 0.25s var(--ease), width 0.25s var(--ease);
-
-      &.is-active {
-        width: 52px;
-        background: var(--accent-soft);
-      }
-    }
   }
 }
 
