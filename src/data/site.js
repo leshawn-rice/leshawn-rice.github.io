@@ -12,15 +12,19 @@ import git from '../assets/tools/git.svg';
 import github from '../assets/tools/github.svg';
 import githubActions from '../assets/tools/github-actions.svg';
 import helm from '../assets/tools/helm.svg';
-import javascript from '../assets/tools/javascript.svg';
 import jenkins from '../assets/tools/jenkins.svg';
 import kubernetes from '../assets/tools/kubernetes.svg';
 import linux from '../assets/tools/linux.svg';
+import nginx from '../assets/tools/nginx.svg';
+import nodejs from '../assets/tools/nodejs.svg';
 import pagerduty from '../assets/tools/pagerduty.svg';
 import powershell from '../assets/tools/powershell.png';
 import python from '../assets/tools/python.svg';
+import snyk from '../assets/tools/snyk.svg';
+import sonarqube from '../assets/tools/sonarqube.svg';
 import terraform from '../assets/tools/terraform.svg';
 import vmware from '../assets/tools/vmware.svg';
+import windows from '../assets/tools/windows.svg';
 
 export const RESUME_URL = '/docs/RiceLeshawn_Resume.pdf';
 
@@ -120,17 +124,18 @@ export const toolCategories = [
   { id: 'iac', label: 'Infrastructure as Code' },
   { id: 'containers', label: 'Containers & Orchestration' },
   { id: 'pipelines', label: 'Pipelines & CI/CD' },
+  { id: 'security', label: 'Security & Quality' },
   { id: 'observability', label: 'Observability & Operations' },
   { id: 'vcs', label: 'Version Control' },
   { id: 'cloud', label: 'Cloud Platforms' },
-  { id: 'os-virt', label: 'Operating Systems & Virtualization' },
+  { id: 'systems', label: 'Systems & Infrastructure' },
 ];
 
 export const tools = [
   { name: 'Bash', desc: 'Linux Scripting', logo: bash, tags: ['scripting'] },
   { name: 'PowerShell', desc: 'Windows Scripting', logo: powershell, tags: ['scripting'] },
   { name: 'Python', desc: 'Scripting & Automation', logo: python, tags: ['scripting'] },
-  { name: 'JavaScript', desc: 'Tooling & Services', logo: javascript, tags: ['scripting'] },
+  { name: 'Node.js', desc: 'APIs & Services', logo: nodejs, tags: ['scripting'] },
   { name: 'Terraform', desc: 'Infrastructure as Code', logo: terraform, tags: ['iac'] },
   { name: 'Ansible', desc: 'Configuration Management', logo: ansible, tags: ['iac'] },
   { name: 'Docker', desc: 'Containerization', logo: docker, tags: ['containers'] },
@@ -139,14 +144,18 @@ export const tools = [
   { name: 'Jenkins', desc: 'Automation / CI-CD', logo: jenkins, tags: ['pipelines'] },
   { name: 'GitHub Actions', desc: 'Automation / CI-CD', logo: githubActions, tags: ['pipelines'] },
   { name: 'Azure DevOps', desc: 'Pipelines & Boards', logo: azureDevops, tags: ['pipelines', 'vcs'] },
+  { name: 'SonarQube', desc: 'Code Quality & Analysis', logo: sonarqube, tags: ['security', 'pipelines'] },
+  { name: 'Snyk', desc: 'Vulnerability Scanning', logo: snyk, tags: ['security', 'pipelines'] },
   { name: 'Datadog', desc: 'Metrics & Monitoring', logo: datadog, tags: ['observability'] },
   { name: 'PagerDuty', desc: 'On-Call & Incidents', logo: pagerduty, tags: ['observability'] },
   { name: 'Git', desc: 'Version Control', logo: git, tags: ['vcs'] },
   { name: 'GitHub', desc: 'Version Control', logo: github, tags: ['vcs'] },
   { name: 'Azure', desc: 'Cloud Platform', logo: azure, tags: ['cloud'] },
   { name: 'AWS', desc: 'Cloud Platform', logo: aws, tags: ['cloud'] },
-  { name: 'Linux', desc: 'Ubuntu, Fedora, CentOS', logo: linux, tags: ['os-virt'] },
-  { name: 'VMware', desc: 'Virtualization', logo: vmware, tags: ['os-virt'] },
+  { name: 'Linux', desc: 'Ubuntu, Fedora, CentOS', logo: linux, tags: ['systems'] },
+  { name: 'Windows Server', desc: 'Server Administration', logo: windows, tags: ['systems'] },
+  { name: 'VMware', desc: 'Virtualization', logo: vmware, tags: ['systems'] },
+  { name: 'NGINX', desc: 'Reverse Proxy & Load Balancing', logo: nginx, tags: ['systems'] },
 ];
 
 export const education = [

@@ -37,32 +37,42 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Replace gh-pages with the build output
+      - name: Publish the build output to gh-pages
         run: |
           set -euo pipefail
 
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Check gh-pages out beside the repo. Its history is kept; only the
-          # files are swapped, so a bad deploy stays revertable.
-          git fetch origin gh-pages:gh-pages
-          git worktree add ../site gh-pages
+          git fetch --no-tags --depth=1 origin gh-pages
 
-          # Wipe everything except .git, then lay down the fresh build. This
-          # removes files that no longer exist in dist/, which a plain copy
-          # would leave behind. dist/ carries its own CNAME and .nojekyll from
-          # public/, so the custom domain survives.
-          find ../site -mindepth 1 -maxdepth 1 -not -name .git -exec rm -rf {} +
-          cp -r dist/. ../site/
+          # Build a git tree object straight out of dist/ using a throwaway
+          # index, then commit it with the current gh-pages tip as its parent.
+          # Nothing is deleted or copied on disk: the commit's tree *is* dist/,
+          # so files dropped from the build simply aren't in it. History is
+          # kept, so a bad deploy stays revertable.
+          #
+          # The index must not already exist - git rejects an empty file as an
+          # index - so take a directory and name the file inside it.
+          GIT_INDEX_FILE="$(mktemp -d)/index"; export GIT_INDEX_FILE
 
-          cd ../site
-          git add -A
+          git --work-tree=dist add -A
+          tree="$(git write-tree)"
+          parent="$(git rev-parse FETCH_HEAD)"
 
-          if git diff --cached --quiet; then
+          # If $commit below were ever empty the refspec would read
+          # ":refs/heads/gh-pages", which DELETES the branch and takes the site
+          # down. Refuse to continue on anything unset or empty.
+          : "${tree:?failed to write a tree from dist/}"
+          : "${parent:?could not resolve the current gh-pages tip}"
+
+          if [ "$tree" = "$(git rev-parse "${parent}^{tree}")" ]; then
             echo "Built output is identical to what is already published; nothing to do."
             exit 0
           fi
 
-          git commit -m "Build ${GITHUB_SHA} from ${GITHUB_REF_NAME}"
-          git push origin gh-pages
+          commit="$(git commit-tree "$tree" -p "$parent" \
+            -m "Build ${GITHUB_SHA} from ${GITHUB_REF_NAME}")"
+          : "${commit:?commit-tree produced no commit}"
+
+          git push origin "${commit}:refs/heads/gh-pages"
