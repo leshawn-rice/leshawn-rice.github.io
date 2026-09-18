@@ -65,7 +65,8 @@ transparent PNGs.
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and
-replaces the contents of `gh-pages` with `dist/`.
+then runs `.github/scripts/publish-content.sh` to put `dist/` on the
+`gh-pages` branch.
 
 That is the whole job. GitHub Pages is configured to serve the `gh-pages`
 branch, so GitHub's own "pages build and deployment" run publishes it as soon
