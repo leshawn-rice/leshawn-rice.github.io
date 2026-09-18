@@ -8,15 +8,26 @@
   background-position: center right;
   background-size: cover;
 
+  // Two layers rather than one sweep: a soft pool anchored behind the copy,
+  // over a gentler left-to-right fade. Keeps the streaks vivid on the right
+  // while giving the text a consistently dark ground to sit on.
   &__scrim {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      100deg,
-      rgb(7 18 13 / 88%) 0%,
-      rgb(7 18 13 / 62%) 42%,
-      rgb(7 18 13 / 18%) 78%
-    );
+    background:
+      radial-gradient(
+        130% 95% at 6% 52%,
+        rgb(4 12 9 / 94%) 0%,
+        rgb(4 12 9 / 82%) 26%,
+        rgb(4 12 9 / 46%) 52%,
+        rgb(4 12 9 / 0%) 78%
+      ),
+      linear-gradient(
+        100deg,
+        rgb(7 18 13 / 70%) 0%,
+        rgb(7 18 13 / 34%) 55%,
+        rgb(7 18 13 / 8%) 88%
+      );
   }
 
   &__content {
@@ -32,6 +43,7 @@
     font-size: clamp(38px, 7vw, 76px);
     font-weight: 600;
     line-height: 1.05;
+    text-shadow: 0 2px 30px rgb(4 12 9 / 55%);
     animation: hero-in 0.9s var(--ease) both;
     animation-delay: 0.15s;
   }
@@ -43,6 +55,7 @@
     font-size: clamp(21px, 3vw, 34px);
     font-weight: 400;
     line-height: 1.2;
+    text-shadow: 0 1px 22px rgb(4 12 9 / 55%);
     animation: hero-in 0.9s var(--ease) both;
     animation-delay: 0.3s;
   }
@@ -54,6 +67,7 @@
     font-size: clamp(16px, 2vw, 21px);
     font-weight: 400;
     line-height: 1.45;
+    text-shadow: 0 1px 18px rgb(4 12 9 / 55%);
     animation: hero-in 0.9s var(--ease) both;
     animation-delay: 0.42s;
   }
@@ -81,12 +95,19 @@
     min-height: 88svh;
 
     &__scrim {
-      background: linear-gradient(
-        160deg,
-        rgb(7 18 13 / 90%) 0%,
-        rgb(7 18 13 / 72%) 60%,
-        rgb(7 18 13 / 55%) 100%
-      );
+      background:
+        radial-gradient(
+          140% 70% at 30% 48%,
+          rgb(4 12 9 / 92%) 0%,
+          rgb(4 12 9 / 74%) 45%,
+          rgb(4 12 9 / 40%) 80%
+        ),
+        linear-gradient(
+          160deg,
+          rgb(7 18 13 / 72%) 0%,
+          rgb(7 18 13 / 52%) 60%,
+          rgb(7 18 13 / 46%) 100%
+        );
     }
   }
 }
