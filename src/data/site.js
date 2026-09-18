@@ -69,7 +69,7 @@ export const about = {
     { text: 'Infrastructure as Code with Terraform & Ansible' },
     { text: 'Kubernetes & Helm-based delivery' },
     { text: 'Observability & production on-call' },
-    { text: 'Coin Collector', href: 'https://pacificnumismatics.com' },
+    { text: 'Coin Collector' },
   ],
 };
 
