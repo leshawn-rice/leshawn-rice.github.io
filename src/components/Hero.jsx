@@ -1,26 +1,31 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { slides } from '../data/site';
 
-const INTERVAL = 9000;
+const INTERVAL = 5000;
+// The loader sits over the page for the first moment or so. Without this the
+// opening slide is only actually visible for ~3.5s of its 5s.
+const LOADER_GRACE = 1500;
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  // Auto-advance stops for good once the viewer picks a slide themselves.
+  const [userPicked, setUserPicked] = useState(false);
+  const firstRun = useRef(true);
 
+  // Keyed on `index` rather than run as an interval, so every slide gets the
+  // full duration - including one the viewer selects, which would otherwise
+  // inherit whatever was left on a shared interval.
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced || paused) return undefined;
-    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), INTERVAL);
-    return () => clearInterval(id);
-  }, [paused]);
+    if (reduced || userPicked) return undefined;
+    const wait = firstRun.current ? INTERVAL + LOADER_GRACE : INTERVAL;
+    firstRun.current = false;
+    const id = setTimeout(() => setIndex((i) => (i + 1) % slides.length), wait);
+    return () => clearTimeout(id);
+  }, [index, userPicked]);
 
   return (
-    <section
-      id="home"
-      className="hero"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
+    <section id="home" className="hero">
       {slides.map((slide, i) => (
         <div
           key={slide.title}
@@ -60,7 +65,10 @@ export default function Hero() {
             aria-selected={i === index}
             aria-label={`Show slide ${i + 1}: ${slide.title}`}
             className={i === index ? 'is-active' : undefined}
-            onClick={() => setIndex(i)}
+            onClick={() => {
+              setIndex(i);
+              setUserPicked(true);
+            }}
           />
         ))}
       </div>
