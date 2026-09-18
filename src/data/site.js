@@ -189,7 +189,7 @@ export const skillSet = [
   'Strong Communicator',
   'Automation Machine',
   'Cloud Wizard',
-  'Hobbyist Coin Collector',
+  'Incident Responder',
 ];
 
 export const loaderPhrases = [
