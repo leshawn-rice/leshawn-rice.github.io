@@ -70,13 +70,12 @@ export const about = {
   // rendered into a two-column grid, filling row by row
   highlights: [
     { text: 'Skilled Technical Coordinator' },
-    { text: 'Internal developer platforms & golden paths' },
+    { text: 'Self-service internal developer platforms' },
     { text: 'CI/CD, GitOps & release automation' },
     { text: 'Infrastructure as Code with Terraform & Ansible' },
     { text: 'Kubernetes & Helm-based delivery' },
     { text: 'Observability & production on-call' },
     { text: 'AI enablement & governance' },
-    { text: 'Coin Collector' },
   ],
 };
 
@@ -87,7 +86,8 @@ export const experience = [
     period: 'March 2026 – Present',
     icon: 'platform',
     body: [
-      "I build and own BBSI's **internal developer platform**: self-service environments, **golden-path service templates**, reusable pipeline templates, and a service catalog that gives teams one place to find what exists, who owns it, and how to ship it.",
+      "I build and own BBSI's **internal developer platform**, which lets developers deploy their own applications into our internal cloud infrastructure through **pre-approved patterns**, instead of waiting on someone else to do it for them.",
+      'The old path was a ticket: weeks of queueing and approvals while DevOps stood up the infrastructure by hand and wrote a CI/CD pipeline to match. Now a developer clicks a button and the platform provisions the **infrastructure**, deploys the **application**, and wires up **CI/CD** behind it. Because the patterns are vetted up front, self-service doesn\'t mean giving up security or compliance review.',
       'On the AI side, I brought **AI-assisted test generation** into our SDLC and built the pipelines that vet and onboard proposed **skills and MCP servers** into our agentic environments, so new capabilities arrive through a reviewed path instead of ad hoc.',
       'I work with engineering and security to define the **governance patterns for responsible AI use** — an approved tool and model allowlist, rules for what data may reach a model, a security review before anything is adopted, and usage logging that holds up to audit.',
     ],
