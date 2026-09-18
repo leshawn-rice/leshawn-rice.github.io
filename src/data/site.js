@@ -41,6 +41,7 @@ export const navLinks = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About Me' },
   { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
   { id: 'tools', label: 'Tools' },
   { id: 'education', label: 'Education & Certifications' },
 ];
@@ -88,7 +89,7 @@ export const experience = [
     period: 'March 2026 – Present',
     icon: 'platform',
     body: [
-      "I build BBSI's **internal developer platform**, giving development teams **self-service deployment** through pre-approved patterns. Work that used to wait weeks on tickets, approvals and hand-built pipelines now ships on demand.",
+      "I lead a project building an **internal developer platform**, giving development teams **self-service deployment** through pre-approved patterns. Work that used to wait weeks on tickets, approvals and hand-built pipelines now ships on demand.",
       'Day to day, I build, maintain and support the **platforms and workflows** developers rely on — streamlining delivery into staging and production while keeping it aligned with our **security and compliance standards**.',
     ],
   },
@@ -113,6 +114,47 @@ export const experience = [
       'I delivered **multi-factor authentication** for a custom OpenVPN platform end to end — backend, frontend, data model and client installer.',
       'I built an **end-to-end test environment** that simulated the full product stack on virtualised infrastructure, avoiding an estimated **$10k a year** in cloud spend, and automated environment setup across internal systems with **Ansible**.',
     ],
+  },
+];
+
+// Public repos, described from what's actually in them. Nothing here touches
+// employer work - these are all generic, self-owned artefacts.
+export const projects = [
+  {
+    name: 'Azure Standard Naming',
+    repo: 'terraform-azurerm-standard-naming',
+    desc: "A Terraform module that builds Azure resource names from a resource type and a set of descriptors, validating each one against Microsoft's naming rules and failing the plan when a name wouldn't be legal. Covered by native `terraform test` suites across a dozen resource types.",
+    tags: ['Terraform', 'Azure', 'Tested'],
+  },
+  {
+    name: 'Private Terraform Agent',
+    repo: 'terraform-agents',
+    desc: 'Runs a self-hosted Terraform agent on Azure Container Instances inside its own virtual network, with remote state and a GitHub Actions workflow driving it, so plans and applies never traverse the public internet.',
+    tags: ['Terraform', 'Azure', 'GitHub Actions'],
+  },
+  {
+    name: 'Azure Subscription Module',
+    repo: 'terraform-azurerm-subscription',
+    desc: 'Provisions Azure subscriptions with naming and tagging composed from registry-published modules, so every subscription arrives with consistent identity and metadata rather than whatever the operator typed.',
+    tags: ['Terraform', 'Azure', 'Module Registry'],
+  },
+  {
+    name: 'Azure Module Library',
+    repo: 'terraform-modules',
+    desc: 'An umbrella repo collecting composable Azure modules — resource groups, naming, tags, subnets, virtual networks, container groups and subscriptions — tracked as submodules so stacks can pin what they consume.',
+    tags: ['Terraform', 'Azure'],
+  },
+  {
+    name: 'Jenkins Provisioning',
+    repo: 'jenkins-setup',
+    desc: 'An Ansible playbook that stands up a Jenkins controller from nothing: security realm, credentials, CLI access and API key bootstrapping, all templated rather than clicked through a setup wizard.',
+    tags: ['Ansible', 'Jenkins', 'Python'],
+  },
+  {
+    name: 'This Site',
+    repo: 'leshawn-rice.github.io',
+    desc: 'Vite and React with no UI framework. A GitHub Action builds it and publishes to gh-pages by committing a tree written straight from the build output, so nothing is copied or deleted on disk.',
+    tags: ['React', 'Vite', 'GitHub Actions'],
   },
 ];
 

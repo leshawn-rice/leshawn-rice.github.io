@@ -1,0 +1,124 @@
+@use 'mixins' as m;
+
+.projects {
+  &__grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__more {
+    display: inline-flex;
+    margin: 44px auto 0;
+  }
+
+  > .container {
+    text-align: center;
+  }
+}
+
+.project {
+  @include m.card;
+
+  padding: 0;
+  text-align: left;
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 28px 26px;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &__head {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  &__head > svg:first-child {
+    flex: none;
+    color: var(--accent-mid);
+  }
+
+  &__name {
+    flex: 1;
+    color: var(--ink);
+    font-family: var(--font-head);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  &__out {
+    flex: none;
+    color: var(--muted);
+    opacity: 0;
+    transform: translate(-3px, 3px);
+    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+  }
+
+  &:hover &__out {
+    opacity: 1;
+    transform: none;
+  }
+
+  &__repo {
+    margin-bottom: 14px;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  &__desc {
+    margin-bottom: 20px;
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+
+  &__desc code {
+    padding: 1px 5px;
+    border-radius: 4px;
+    background: rgb(var(--accent-rgb) / 9%);
+    color: var(--accent-ink);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: auto;
+  }
+
+  &__tag {
+    padding: 4px 11px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--body);
+    font-family: var(--font-head);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (max-width: 991px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .projects__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

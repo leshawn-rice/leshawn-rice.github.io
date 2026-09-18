@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Loader from './components/Loader';
 import Nav from './components/Nav';
+import Projects from './components/Projects';
 import ScrollTop from './components/ScrollTop';
 import Tools from './components/Tools';
 
@@ -20,6 +21,7 @@ export default function App() {
         <Hero />
         <About />
         <Experience />
+        <Projects />
         <Tools />
         <Education />
       </main>
