@@ -15,10 +15,12 @@ import helm from '../assets/tools/helm.svg';
 import javascript from '../assets/tools/javascript.svg';
 import jenkins from '../assets/tools/jenkins.svg';
 import kubernetes from '../assets/tools/kubernetes.svg';
+import linux from '../assets/tools/linux.svg';
 import pagerduty from '../assets/tools/pagerduty.svg';
 import powershell from '../assets/tools/powershell.png';
 import python from '../assets/tools/python.svg';
 import terraform from '../assets/tools/terraform.svg';
+import vmware from '../assets/tools/vmware.svg';
 
 export const RESUME_URL = '/docs/RiceLeshawn_Resume.pdf';
 
@@ -106,7 +108,7 @@ export const experience = [
     period: 'August 2021 – August 2022',
     icon: 'monitor',
     body: [
-      'Uplevel sells networking-as-a-service to MSPs — gateways, access points, switches and work-from-home boxes, paired with cloud services. I rewrote the **health-check workflow** covering every cloud VM behind that fleet: database health, backup presence, CPU, memory and storage headroom, SSH reachability. The original ran serially; I rebuilt it, added checks, and parallelised the SSH work with **Python threading**, taking a full run from **over 24 hours to roughly one**.',
+      'I rewrote the **health-check workflow** covering every cloud VM behind our networking fleet: database health, backup presence, CPU, memory and storage headroom, SSH reachability. The original ran serially; I rebuilt it, added checks, and parallelised the SSH work with **Python threading**, taking a full run from **over 24 hours to roughly one**.',
       'I owned **multi-factor authentication** for our custom OpenVPN platform end to end — the backend service, the frontend toggles, the database schema, and a PowerShell-built **client installer** that set up the connection for the user.',
       'I built an **end-to-end testing framework** for the whole product stack, running on a virtualised environment of VMs that simulated the cloud servers and on-site hardware wired together the way a real deployment would be. It exercised cloud-to-hardware communication, **Snort** detection and blocking, allow/deny listing, and MSP sub-client onboarding — and hosting it that way avoided an estimated **$10k a year** against what the same workloads would have cost us in AWS.',
       'I used **Ansible** to automate environment setup and configuration tasks across internal systems.',
@@ -123,6 +125,7 @@ export const toolCategories = [
   { id: 'observability', label: 'Observability & Operations' },
   { id: 'vcs', label: 'Version Control' },
   { id: 'cloud', label: 'Cloud Platforms' },
+  { id: 'os-virt', label: 'Operating Systems & Virtualization' },
 ];
 
 export const tools = [
@@ -144,6 +147,8 @@ export const tools = [
   { name: 'GitHub', desc: 'Version Control', logo: github, tags: ['vcs'] },
   { name: 'Azure', desc: 'Cloud Platform', logo: azure, tags: ['cloud'] },
   { name: 'AWS', desc: 'Cloud Platform', logo: aws, tags: ['cloud'] },
+  { name: 'Linux', desc: 'Ubuntu, Fedora, CentOS', logo: linux, tags: ['os-virt'] },
+  { name: 'VMware', desc: 'Virtualization', logo: vmware, tags: ['os-virt'] },
 ];
 
 export const education = [
