@@ -90,6 +90,9 @@
     color: var(--accent-ink);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 12.5px;
+    // keep short commands on one line - wrapping mid-phrase strands the
+    // punctuation that follows them
+    white-space: nowrap;
   }
 
   &__tags {

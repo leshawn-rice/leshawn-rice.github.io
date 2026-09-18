@@ -141,7 +141,7 @@ export const projects = [
   {
     name: 'FreeBooks',
     repo: 'freebooks',
-    desc: 'A command-line tool that decrypts Audible AAX files and converts them to MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks` — and it ships the native tables and binaries it depends on, so the install is self-contained.',
+    desc: 'A command-line tool that decrypts Audible AAX files and converts them to MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks`.',
     tags: ['Python', 'CLI', 'PyPI'],
   },
   {
