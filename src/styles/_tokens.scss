@@ -1,19 +1,24 @@
-// Design tokens lifted from the previous build's theme so the rebuild keeps
-// the same palette and type rhythm (accent #a277ff / rule #f694ff, Montserrat
-// headings over Open Sans body copy).
+// Forest-green palette. The ramp runs deep (--accent-ink) through the primary
+// fill (--accent) to a light mint (--accent-soft) that carries the accent on
+// dark surfaces, where the deeper greens disappear.
+//
+// --accent is the fill that white text sits on (6.4:1), --accent-ink is the
+// text weight on light grounds (11:1), --accent-mid is decorative only.
 :root {
-  --accent: #a277ff;
-  --accent-soft: #f694ff;
-  --accent-ink: #7b4dff;
+  --accent: #2d6a4f;
+  --accent-ink: #1b4332;
+  --accent-mid: #40916c;
+  --accent-soft: #74c69d;
+  --accent-rgb: 45 106 79;
 
-  --ink: #272727;
-  --body: #727272;
-  --muted: #9a9a9a;
+  --ink: #1f2a24;
+  --body: #69756f;
+  --muted: #8b958e;
 
   --bg: #ffffff;
-  --bg-light: #f8f8f8;
-  --bg-dark: #101010;
-  --line: #e9e9e9;
+  --bg-light: #f5f8f6;
+  --bg-dark: #111a15;
+  --line: #e4eae6;
 
   --font-head: 'Montserrat', system-ui, sans-serif;
   --font-body: 'Open Sans', system-ui, sans-serif;
@@ -23,8 +28,8 @@
   --radius: 5px;
   --radius-lg: 12px;
 
-  --shadow-sm: 0 1px 2px rgb(20 16 40 / 6%), 0 6px 18px rgb(20 16 40 / 5%);
-  --shadow-md: 0 2px 6px rgb(20 16 40 / 7%), 0 18px 44px rgb(20 16 40 / 9%);
+  --shadow-sm: 0 1px 2px rgb(12 30 22 / 6%), 0 6px 18px rgb(12 30 22 / 5%);
+  --shadow-md: 0 2px 6px rgb(12 30 22 / 7%), 0 18px 44px rgb(12 30 22 / 9%);
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
 }

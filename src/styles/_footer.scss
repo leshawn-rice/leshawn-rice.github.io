@@ -30,7 +30,7 @@
     font-size: 14px;
 
     &:hover {
-      color: var(--accent-ink);
+      color: var(--accent);
     }
   }
 
@@ -72,7 +72,7 @@
       overflow-wrap: anywhere;
 
       &:hover {
-        color: var(--accent-ink);
+        color: var(--accent);
       }
     }
   }

@@ -11,7 +11,7 @@
   &.is-stuck {
     padding: 6px 0;
     background: rgb(255 255 255 / 92%);
-    box-shadow: 0 1px 0 var(--line), 0 8px 24px rgb(20 16 40 / 6%);
+    box-shadow: 0 1px 0 var(--line), 0 8px 24px rgb(12 30 22 / 6%);
     backdrop-filter: blur(10px);
   }
 
@@ -24,10 +24,27 @@
 
   // over the dark hero the tile goes purple; once the bar is white it goes ink
   &:not(.is-stuck) &__logo .logo {
-    --logo-tile: var(--accent);
+    --logo-tile: var(--accent-mid);
     --logo-cursor: rgb(255 255 255 / 70%);
     --logo-dot: var(--accent-soft);
     --logo-ink: #fff;
+  }
+
+  // on the dark hero the deep greens vanish, so the accent flips to the mint
+  // end of the ramp - and the resume pill inverts to keep its text legible
+  &:not(.is-stuck) &__menu a::after {
+    background: var(--accent-soft);
+  }
+
+  &:not(.is-stuck) &__resume a {
+    border-color: var(--accent-soft);
+    background: var(--accent-soft);
+    color: var(--accent-ink) !important;
+
+    &:hover {
+      border-color: #fff;
+      background: #fff;
+    }
   }
 
   &__toggle {

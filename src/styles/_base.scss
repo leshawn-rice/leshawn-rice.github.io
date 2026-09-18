@@ -40,12 +40,12 @@ p {
 }
 
 a {
-  color: var(--accent-ink);
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s var(--ease);
 
   &:hover {
-    color: var(--accent);
+    color: var(--accent-ink);
   }
 }
 

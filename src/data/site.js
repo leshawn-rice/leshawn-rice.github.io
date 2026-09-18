@@ -1,5 +1,5 @@
-import sliderGrey from '../assets/hero/slider-grey.jpg';
-import sliderTl from '../assets/hero/slider-tl.jpg';
+import heroDashboard from '../assets/hero/hero-dashboard.jpg';
+import heroFiber from '../assets/hero/hero-fiber.jpg';
 
 import ansible from '../assets/tools/ansible.svg';
 import aws from '../assets/tools/aws.svg';
@@ -47,13 +47,13 @@ export const navLinks = [
 // it as a full sentence. A slide uses one or the other, not both.
 export const slides = [
   {
-    image: sliderGrey,
+    image: heroDashboard,
     title: 'Leshawn Rice',
     tagline: 'Fewer tickets. Faster deploys.',
     cta: 'Get in Touch!',
   },
   {
-    image: sliderTl,
+    image: heroFiber,
     lead: 'Experienced',
     title: 'Platform Engineer',
     cta: 'Get in Touch!',

@@ -43,6 +43,19 @@ there is no light/dark asset pair to keep in sync.
 
 The favicons in `public/` are rendered from that same mark.
 
+## Hero imagery
+
+`src/assets/hero/hero-dashboard.jpg` is the original isometric illustration from
+the previous build, recoloured from violet to green. A plain hue rotation washed
+it out (HSV preserves value, not luma) and scattered the minority hues - cyan
+landed on blue, orange on magenta - so the recolour folds every hue into a band
+around 140 deg and rescales each pixel back to its original luma. The script
+that did it is not checked in; it was a one-off.
+
+`src/assets/hero/hero-fiber.jpg` is from Unsplash (`photo-1760344594784-60ff14035eb0`),
+mirrored so the bright side sits clear of the headline. The Unsplash License
+does not require attribution.
+
 ## Tool logos
 
 Full-colour SVGs from [gilbarbara/logos](https://github.com/gilbarbara/logos).

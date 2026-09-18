@@ -10,7 +10,7 @@
     border-color 0.3s var(--ease);
 
   &:hover {
-    border-color: rgb(162 119 255 / 45%);
+    border-color: rgb(var(--accent-rgb) / 45%);
     box-shadow: var(--shadow-md);
     transform: translateY(-4px);
   }
@@ -23,9 +23,9 @@
   width: 62px;
   height: 62px;
   margin-bottom: 20px;
-  border: 1px solid rgb(162 119 255 / 30%);
+  border: 1px solid rgb(var(--accent-rgb) / 26%);
   border-radius: 50%;
-  background: rgb(162 119 255 / 8%);
-  color: var(--accent-ink);
+  background: rgb(var(--accent-rgb) / 10%);
+  color: var(--accent-mid);
   transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
 }
