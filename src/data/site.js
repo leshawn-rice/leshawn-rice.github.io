@@ -155,7 +155,7 @@ export const tools = [
     name: 'Terraform',
     logo: terraform,
     tags: ['iac'],
-    note: 'I write the configurations behind web services, virtual machines and load balancer infrastructure, and publish reusable modules to a private registry gated by module tests and Sentinel policies.',
+    note: 'I write the configurations and reusable modules behind cloud and on-premise infrastructure, published to a private registry and gated by module tests and Sentinel policies.',
   },
   {
     name: 'Ansible',
@@ -167,13 +167,13 @@ export const tools = [
     name: 'Kubernetes',
     logo: kubernetes,
     tags: ['delivery'],
-    note: 'I author the Helm charts and manifests behind our services, deploy the AKS clusters they run on, and debug workloads in production when they fail.',
+    note: 'I author the Helm charts and manifests behind services, deploy the AKS clusters they run on, and debug workloads in production when they fail.',
   },
   {
     name: 'Docker',
     logo: docker,
     tags: ['delivery'],
-    note: 'I write the Dockerfiles behind our services and own the build pipeline that tags, scans for vulnerabilities, tests and pushes each image to the registry.',
+    note: 'I write the Dockerfiles behind services and own the build pipeline that tags, scans for vulnerabilities, tests and pushes each image to the registry.',
   },
   {
     name: 'Azure DevOps',
@@ -185,7 +185,7 @@ export const tools = [
     name: 'Azure',
     logo: azure,
     tags: ['cloud'],
-    note: 'My primary cloud, in advanced daily use — provisioning, configuring and operating networking, compute, storage, data and messaging services across the stack.',
+    note: 'My primary cloud, in advanced daily use — provisioning, configuring and operating infrastructure across the platform, from core networking through to managed data and application services.',
   },
   {
     name: 'AWS',
@@ -197,19 +197,19 @@ export const tools = [
     name: 'VMware',
     logo: vmware,
     tags: ['cloud'],
-    note: 'I\'ve deployed 40+ VM environments programmatically and operate vSphere end to end — hosts, datastores and guests, with NSX networking and Pure Storage underneath.',
+    note: 'I provision virtualized environments programmatically and operate vSphere end to end, from host and datastore administration through to the NSX networking and Pure Storage underneath.',
   },
   {
     name: 'Python',
     logo: python,
     tags: ['scripting'],
-    note: 'My main language for automation and tooling — REST APIs, database layers and internal utilities, including a fleet health check I parallelized with threading to cut a full-day run to about an hour.',
+    note: 'I build REST APIs, database layers and internal tooling with it, including a fleet health check I parallelized with threading to cut a full-day run to about an hour.',
   },
   {
     name: 'PowerShell',
     logo: powershell,
     tags: ['scripting'],
-    note: 'I automate Windows estate management and drive vSphere configuration through PowerCLI, and packaged the OpenVPN client installer as a compiled PowerShell executable.',
+    note: 'I automate Windows system administration and drive vSphere configuration through PowerCLI, and packaged the OpenVPN client installer as a compiled PowerShell executable.',
   },
 ];
 
