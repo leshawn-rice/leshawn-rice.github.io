@@ -46,7 +46,7 @@ export default function Tools() {
                 <img src={tool.logo} alt={`${tool.name} logo`} loading="lazy" decoding="async" />
               </span>
               <span className="tool__body">
-                <span className="tool__name">{tool.name}</span>
+                <h3 className="tool__name">{tool.name}</h3>
                 <span className="tool__note">{tool.note}</span>
               </span>
             </li>

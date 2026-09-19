@@ -35,7 +35,7 @@ export default function Projects() {
                 >
                   <span className="project__head">
                     <Icon name="repo" size={20} />
-                    <span className="project__name">{project.name}</span>
+                    <h3 className="project__name">{project.name}</h3>
                     <Icon name="external" size={15} className="project__out" />
                   </span>
 

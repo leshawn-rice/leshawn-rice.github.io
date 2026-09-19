@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <SectionTitle heading={about.heading} align="left" />
+        <SectionTitle heading={about.heading} />
 
         <div className="about__cols">
           <div className="about__lede">

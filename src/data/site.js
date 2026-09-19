@@ -42,12 +42,12 @@ export const hero = {
 export const about = {
   heading: 'Brief History',
   body: [
-    "I'm a **results-oriented** Platform Engineer with **5 years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
+    "I'm a Platform Engineer with **5 years** of experience building CI/CD pipelines, automating cloud and on-prem systems, and improving **reliability**, **security**, and **delivery speed**.",
     'I work across the whole delivery path, from the infrastructure underneath to the pipelines that carry code into production. My background covers **Linux operations**, **Infrastructure as Code**, **containers**, **observability**, and **source control**, with regular PagerDuty-managed on-call coverage.',
   ],
   // rendered into a two-column grid, filling row by row
   highlights: [
-    { text: 'Skilled Technical Coordinator' },
+    { text: 'Technical evaluation & cross-team coordination' },
     { text: 'Self-service internal developer platforms' },
     { text: 'CI/CD, GitOps & release automation' },
     { text: 'Infrastructure as Code with Terraform & Ansible' },
@@ -208,34 +208,28 @@ export const tools = [
 
 export const education = [
   {
-    icon: 'toolbox',
-    title: 'Software Engineering',
-    org: 'Springboard — 2021',
-    body: 'Intensive course in Software Engineering methodologies and technologies.',
-    meta: [
-      ['Certificate ID', '34785473'],
-    ],
-    note: '**700+ hours** of hands-on course material over nine months, with 1:1 industry expert mentor oversight.',
+    icon: 'globe',
+    title: 'Terraform Associate',
+    org: 'HashiCorp',
+    year: '2025',
+    note: 'HCTA0-003.',
   },
   {
     icon: 'documents',
     title: 'Azure Fundamentals',
-    org: 'Microsoft (AZ-900) — 2024',
-    body: 'Microsoft Certified Azure Fundamentals.',
-    meta: [
-      ['Credential ID', '4E1157DF9E365CF'],
-    ],
+    org: 'Microsoft',
+    year: '2024',
+    note: 'AZ-900.',
   },
   {
-    icon: 'globe',
-    title: 'Terraform Associate',
-    org: 'HashiCorp (HCTA0-003) — 2025',
-    body: 'HashiCorp Certified Terraform Associate.',
-    meta: [
-      ['Certificate ID', '8a10a73f-851f-41dc-aa77-1c1e3eaf5724'],
-    ],
+    icon: 'toolbox',
+    title: 'Software Engineering',
+    org: 'Springboard',
+    year: '2021',
+    note: '700+ hours over nine months, with 1:1 industry mentorship.',
   },
 ];
+
 
 export const loaderPhrases = [
   'Pinging Skynet...',
