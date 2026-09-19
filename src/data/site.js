@@ -191,7 +191,7 @@ export const tools = [
     name: 'AWS',
     logo: aws,
     tags: ['cloud'],
-    note: 'Automating EC2 provisioning and management through internal tooling — instance templates, networking and security configuration, alongside cost management across the estate.',
+    note: 'Automating infrastructure provisioning and management through internal tooling — instance templates, networking and security configuration, alongside cost management across the estate.',
   },
   {
     name: 'VMware',
