@@ -185,7 +185,7 @@ export const tools = [
     name: 'Azure',
     logo: azure,
     tags: ['cloud'],
-    note: 'My primary cloud, in advanced daily use — provisioning, configuring and operating infrastructure across the platform, from core networking through to managed data and application services.',
+    note: 'The cloud provider I have the most experience with — provisioning, configuring and operating infrastructure across the platform, from core networking through to managed data and application services.',
   },
   {
     name: 'AWS',
