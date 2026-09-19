@@ -36,7 +36,7 @@ editing `src/data/site.js` and nothing else. Copy supports `**bold**` markers.
 ## Logo
 
 The wordmark is not an image file. `src/components/Logo.jsx` is an inline SVG
-mark plus live Montserrat text, coloured through CSS custom properties
+mark plus live Montserrat text, colored through CSS custom properties
 (`--logo-tile`, `--logo-ink`, `--logo-cursor`, `--logo-dot`). The nav
 overrides them when it goes from the dark hero to the white sticky bar, so
 there is no light/dark asset pair to keep in sync.
@@ -46,9 +46,9 @@ The favicons in `public/` are rendered from that same mark.
 ## Hero imagery
 
 `src/assets/hero/hero-dashboard.jpg` is the original isometric illustration from
-the previous build, recoloured from violet to green. A plain hue rotation washed
+the previous build, recolored from violet to green. A plain hue rotation washed
 it out (HSV preserves value, not luma) and scattered the minority hues - cyan
-landed on blue, orange on magenta - so the recolour folds every hue into a band
+landed on blue, orange on magenta - so the recolor folds every hue into a band
 around 140 deg and rescales each pixel back to its original luma. The script
 that did it is not checked in; it was a one-off.
 
@@ -58,7 +58,7 @@ does not require attribution.
 
 ## Tool logos
 
-Full-colour SVGs from [gilbarbara/logos](https://github.com/gilbarbara/logos).
+Full-color SVGs from [gilbarbara/logos](https://github.com/gilbarbara/logos).
 Azure DevOps and PowerShell have no entry there, so those two stay as
 transparent PNGs.
 
@@ -73,4 +73,4 @@ branch, so GitHub's own "pages build and deployment" run publishes it as soon
 as the branch changes — the workflow does not deploy anything itself.
 
 The branch's history is kept and only its files are swapped, so a bad deploy
-can be reverted. `gh-pages` is a build artefact — never commit to it by hand.
+can be reverted. `gh-pages` is a build artifact — never commit to it by hand.

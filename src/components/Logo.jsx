@@ -1,4 +1,4 @@
-// The mark is inline SVG rather than an image file so it inherits colour from
+// The mark is inline SVG rather than an image file so it inherits color from
 // whatever surface it sits on. The tile, glyph and cursor read from CSS custom
 // properties, which the nav flips when it goes from the dark hero to white.
 export default function Logo() {

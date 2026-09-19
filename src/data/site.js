@@ -93,7 +93,7 @@ export const experience = [
 ];
 
 // Public repos, described from what's actually in them. Nothing here touches
-// employer work - these are all generic, self-owned artefacts.
+// employer work - these are all generic, self-owned artifacts.
 export const projects = [
   {
     name: 'Azure Standard Naming',
