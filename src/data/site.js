@@ -185,7 +185,7 @@ export const tools = [
     name: 'Azure',
     logo: azure,
     tags: ['cloud'],
-    note: 'The cloud provider I have the most experience with — provisioning, configuring and operating infrastructure across the platform, from core networking through to managed data and application services.',
+    note: 'I provision, configure and manage infrastructure across the Azure platform, from core networking through to managed data and application services.',
   },
   {
     name: 'AWS',
