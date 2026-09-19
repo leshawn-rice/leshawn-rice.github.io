@@ -203,7 +203,7 @@ export const tools = [
     name: 'Python',
     logo: python,
     tags: ['scripting'],
-    note: 'I build REST APIs, database layers and internal tooling with it, including a fleet health check I parallelized with threading to cut a full-day run to about an hour.',
+    note: 'I build REST APIs, database layers, GUIs and automation tooling with it, including concurrent workloads where serial execution does not scale.',
   },
   {
     name: 'PowerShell',
