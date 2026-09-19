@@ -99,7 +99,7 @@ export const projects = [
     name: 'Azure Standard Naming',
     repo: 'terraform-azurerm-standard-naming',
     desc: "A Terraform module that builds Azure resource names from a resource type and a set of descriptors, validating each one against Microsoft's naming rules and failing the plan when a name wouldn't be legal. Covered by native `terraform test` suites across a dozen resource types.",
-    tags: ['Terraform', 'Azure', 'Module Registry'],
+    tags: ['Terraform', 'Azure', 'Governance'],
   },
   {
     name: 'Private Terraform Agent',
