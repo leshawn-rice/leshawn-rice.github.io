@@ -22,7 +22,7 @@ export default function Tools() {
   return (
     <section id="tools" className="section tools">
       <div className="container">
-        <SectionTitle heading="Tools & Technologies" />
+        <SectionTitle heading="Tools" />
 
         <div className="tools__filters" role="group" aria-label="Filter tools by category">
           {toolCategories.map((cat) => (
