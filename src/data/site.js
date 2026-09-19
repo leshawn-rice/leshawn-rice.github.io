@@ -85,9 +85,9 @@ export const experience = [
     period: 'August 2021 – August 2022',
     icon: 'monitor',
     body: [
-      'I rebuilt a legacy fleet health-check workflow in **Python**, parallelising its checks to take a full run from **over 24 hours to roughly one** and turning it into something the team could act on.',
+      'I rebuilt a legacy fleet health-check workflow in **Python**, parallelizing its checks to take a full run from **over 24 hours to roughly one** and turning it into something the team could act on.',
       'I delivered **multi-factor authentication** for a custom OpenVPN platform end to end — backend, frontend, data model and client installer.',
-      'I wrote the **end-to-end testing framework**, exercising the full product stack on virtualised infrastructure, keeping heavy testing workloads off the cloud bill. I also automated environment setup across internal systems with **Ansible**.',
+      'I wrote the **end-to-end testing framework**, exercising the full product stack on on-premise virtualized infrastructure, keeping heavy workloads off the cloud bill. I also automated environment setup across internal systems with **Ansible**.',
     ],
   },
 ];
