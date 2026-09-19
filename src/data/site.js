@@ -28,7 +28,7 @@ export const navLinks = [
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
   { id: 'tools', label: 'Tools' },
-  { id: 'education', label: 'Education & Certifications' },
+  { id: 'education', label: 'Certifications' },
 ];
 
 export const hero = {
