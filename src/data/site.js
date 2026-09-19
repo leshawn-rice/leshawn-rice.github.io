@@ -98,7 +98,11 @@ export const projects = [
   {
     name: 'Azure Standard Naming',
     repo: 'terraform-azurerm-standard-naming',
-    desc: "A Terraform module that builds Azure resource names from a resource type and a set of descriptors, validating each one against Microsoft's naming rules and failing the plan when a name wouldn't be legal. Covered by native `terraform test` suites across a dozen resource types.",
+    // published module: link to the registry entry, which carries the docs,
+    // the version history and a link back to the source
+    url: 'https://registry.terraform.io/modules/leshawn-rice/standard-naming/azurerm/latest',
+    urlLabel: 'leshawn-rice/standard-naming/azurerm',
+    desc: "A Terraform module that builds Azure resource names from a resource type and a set of descriptors, validating each against Microsoft's naming rules and failing the plan when a name wouldn't be legal. Published to the Terraform Registry, with native `terraform test` coverage across a dozen resource types.",
     tags: ['Terraform', 'Azure', 'Governance'],
   },
   {

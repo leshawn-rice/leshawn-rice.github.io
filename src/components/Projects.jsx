@@ -24,7 +24,9 @@ export default function Projects() {
 
         <ul className="projects__grid">
           {projects.map((project) => {
-            const url = `https://github.com/${GITHUB_USER}/${project.repo}`;
+            // most cards link to the repo; a published artifact links to
+            // where it is published, which links back to the source anyway
+            const url = project.url || `https://github.com/${GITHUB_USER}/${project.repo}`;
             return (
               <li key={project.repo} className="project">
                 <a
@@ -39,7 +41,7 @@ export default function Projects() {
                     <Icon name="external" size={15} className="project__out" />
                   </span>
 
-                  <span className="project__repo">{project.repo}</span>
+                  <span className="project__repo">{project.urlLabel || project.repo}</span>
                   <span className="project__desc">{withCode(project.desc)}</span>
 
                   <span className="project__tags">
