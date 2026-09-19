@@ -155,7 +155,7 @@ export const tools = [
     name: 'Terraform',
     logo: terraform,
     tags: ['iac'],
-    note: 'I build and publish reusable modules to a private registry, with module tests and Sentinel policies gating what teams can consume.',
+    note: 'I write the configurations behind web services, virtual machines and load balancer infrastructure, and publish reusable modules to a private registry gated by module tests and Sentinel policies.',
   },
   {
     name: 'Ansible',
@@ -167,13 +167,13 @@ export const tools = [
     name: 'Kubernetes',
     logo: kubernetes,
     tags: ['delivery'],
-    note: 'I package and deploy services onto AKS, and operate the clusters behind them — including diagnosing incidents in production.',
+    note: 'I author the Helm charts and manifests behind our services, deploy the AKS clusters they run on, and debug workloads in production when they fail.',
   },
   {
     name: 'Docker',
     logo: docker,
     tags: ['delivery'],
-    note: 'I containerize services from the Dockerfile up, and own the pipeline that builds, scans, tests and ships every image.',
+    note: 'I write the Dockerfiles behind our services and own the build pipeline that tags, scans for vulnerabilities, tests and pushes each image to the registry.',
   },
   {
     name: 'Azure DevOps',
@@ -197,19 +197,19 @@ export const tools = [
     name: 'VMware',
     logo: vmware,
     tags: ['cloud'],
-    note: 'I\'ve deployed 40+ VM environments programmatically and operate the estate end to end, from hosts and datastores through to the networking and storage behind them.',
+    note: 'I\'ve deployed 40+ VM environments programmatically and operate vSphere end to end — hosts, datastores and guests, with NSX networking and Pure Storage underneath.',
   },
   {
     name: 'Python',
     logo: python,
     tags: ['scripting'],
-    note: 'My main language for automation and tooling — APIs, database utilities and GUIs, including the fleet health check I rewrote from a full-day run to about an hour.',
+    note: 'My main language for automation and tooling — REST APIs, database layers and internal utilities, including a fleet health check I parallelized with threading to cut a full-day run to about an hour.',
   },
   {
     name: 'PowerShell',
     logo: powershell,
     tags: ['scripting'],
-    note: 'Windows estate management and VMware configuration run through it, and it\'s what the OpenVPN client program was built in.',
+    note: 'I automate Windows estate management and drive vSphere configuration through PowerCLI, and packaged the OpenVPN client installer as a compiled PowerShell executable.',
   },
 ];
 
