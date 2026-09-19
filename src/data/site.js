@@ -87,7 +87,7 @@ export const experience = [
     body: [
       'I rebuilt a legacy fleet health-check workflow in **Python**, parallelising its checks to take a full run from **over 24 hours to roughly one** and turning it into something the team could act on.',
       'I delivered **multi-factor authentication** for a custom OpenVPN platform end to end — backend, frontend, data model and client installer.',
-      'I wrote the **end-to-end testing framework** and its test suite, exercising the full product stack on virtualised infrastructure and keeping it off the cloud bill. I also automated environment setup across internal systems with **Ansible**.',
+      'I wrote the **end-to-end testing framework**, exercising the full product stack on virtualised infrastructure at no recurring cloud cost. I also automated environment setup across internal systems with **Ansible**.',
     ],
   },
 ];
