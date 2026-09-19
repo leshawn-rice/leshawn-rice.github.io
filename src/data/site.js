@@ -129,7 +129,7 @@ export const projects = [
     // published package: PyPI carries the releases and links back to source
     url: 'https://pypi.org/project/freebooks/',
     urlLabel: 'pypi.org/project/freebooks',
-    desc: 'A command-line tool that converts Audible AAX files into MP3, M4A, FLAC, WAV or Opus. Published to PyPI across four releases — `pip install freebooks`.',
+    desc: 'A command-line tool that converts Audible AAX files into MP3, M4A, FLAC, WAV or Opus. Published to PyPI — `pip install freebooks`.',
     tags: ['Python', 'CLI', 'PyPI'],
   },
   {
