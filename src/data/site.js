@@ -173,7 +173,7 @@ export const tools = [
     name: 'Docker',
     logo: docker,
     tags: ['delivery'],
-    note: 'I write the Dockerfiles behind services and own the build pipeline that tags, scans for vulnerabilities, tests and pushes each image to the registry.',
+    note: 'I write the Dockerfiles behind services and own the build pipelines that tag, scan for vulnerabilities, test and push each image to the registry.',
   },
   {
     name: 'Azure DevOps',
