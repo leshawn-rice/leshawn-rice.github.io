@@ -167,7 +167,7 @@ export const tools = [
     name: 'Kubernetes',
     logo: kubernetes,
     tags: ['delivery'],
-    note: 'I author the Helm charts and manifests behind services, deploy the AKS clusters they run on, and debug workloads in production when they fail.',
+    note: 'I author the Helm charts and manifests behind services, deploy and configure the AKS clusters they run on, and handle ingress, cluster networking and production debugging.',
   },
   {
     name: 'Docker',
