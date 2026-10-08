@@ -114,7 +114,7 @@ export const projects = [
   {
     name: 'Grabafone',
     repo: 'grabafone',
-    desc: 'A REST API over scraped cellular device data, with API-key authentication, user management and a Swagger UI for exploring the endpoints. Express and PostgreSQL behind it, a Python seeder loading the data, and a React front end on top.',
+    desc: 'A REST API serving aggregated cellular device data, with API-key authentication, user management and a Swagger UI for exploring the endpoints. Express and PostgreSQL behind it, a Python seeder loading the data, and a React front end on top.',
     tags: ['Node.js', 'PostgreSQL', 'Swagger'],
   },
   {
